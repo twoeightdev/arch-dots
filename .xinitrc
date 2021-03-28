@@ -4,7 +4,7 @@ xset s off -dpms &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/xorg/Xresources &
 remaps &
 xsetroot -cursor_name left_ptr &
-#mpdnotify &
+mpdnotify &
 picom -b &
 setbg &
 dunst &
