@@ -1,0 +1,20 @@
+#!/bin/sh
+# Open web page via dmenu and open on firefox
+TEXT="duckduckgo\ngithub\nludeon\nsuckless\narch\n4anime\nwallhaven\nunixporn\nyoutube\ngmail"
+
+DMENU="$( echo -e $TEXT | dmenu -fn Monospace-12 -nb "#22262e" -sb "#bf616a" -nf "#d8dee9" -l 7 -p web )"
+
+BROWSER="/usr/bin/firefox" #Change this to your preference
+
+case "$DMENU" in
+    duckduckgo)   $BROWSER https://duckduckgo.com              ;;
+    github)       $BROWSER https://github.com                  ;;
+    tagged)       $BROWSER https://ludeon.com/forums/index.php ;;
+    suckless)     $BROWSER https://suckless.org                ;;
+    arch)         $BROWSER https://bbs.archlinux.org/index.php ;;
+    4anime)       $BROWSER https://4anime.to                   ;;
+    wallhaven)    $BROWSER https://wallhaven.cc                ;;
+    unixporn)     $BROWSER https://www.reddit.com/r/unixporn   ;;
+    youtube)      $BROWSER https://www.youtube.com             ;;
+    gmail)        $BROWSER https://gmail.com                   ;;
+esac

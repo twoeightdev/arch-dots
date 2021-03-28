@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod -R a=r,u+w,a+X "$1"

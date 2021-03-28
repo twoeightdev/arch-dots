@@ -1,0 +1,4 @@
+#!/bin/bash
+while "true"; do
+dunstify -a mpdnotify -t 2000 "Now playing" "$(mpc current --wait)"
+done
