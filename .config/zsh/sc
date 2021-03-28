@@ -1,0 +1,12 @@
+ac ~/.cache
+c   ~/.config
+s   ~/.local/share
+dl  ~/.config/dl
+w   ~/.config/work
+mn  /mnt
+b   ~/.local/bin
+h   $HOME
+hc  /media/core
+hd  /media/data
+hw  /media/data/pix/walls
+hb  /media/data/linux_data/backups

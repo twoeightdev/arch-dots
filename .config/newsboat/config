@@ -1,0 +1,50 @@
+show-read-feeds yes
+auto-reload yes
+
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+
+color background          default default
+color listnormal          color8  default
+color listnormal_unread   default default
+color listfocus_unread    default black
+color listfocus           color4  black
+color info                color8  default
+color article             white   default
+search-highlight-colors   default default reverse
+
+browser linkhandler
+macro d set browser "setsid -f menuhandler"; open-in-browser; set browser linkhandler
+macro c set browser "xclip -sel clip <<<" ; open-in-browser; set browser linkhandler
+macro w set browser "$BROWSER"; open-in-browser ; set browser linkhandler
+
+highlight all "---.*---" yellow
+highlight feedlist ".*(0/0))" black
+highlight article "^Feed:.*" white default bold
+highlight article "^Title:.*" blue default bold
+highlight article "^Author:.*" white default
+highlight article "^Date:.*" white default
+highlight article "^Link:.*" blue default bold
+highlight article "\\[[0-9][0-9]*\\]" magenta default
+highlight article "\\[image\\ [0-9]+\\]" yellow default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" yellow default bold
+highlight article ":.*\\(link\\)$" blue default underline
+highlight article ":.*\\(image\\)$" blue default
+highlight article ":.*\\(embedded flash\\)$" magenta default
+highlight article "https?://[^ ]+" blue default underline

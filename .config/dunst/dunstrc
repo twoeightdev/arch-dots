@@ -1,0 +1,61 @@
+# vim: ft=cfg
+[global]
+  font = Monospace 14
+  geometry = "350x5-0+24"
+  padding = 2
+  horizontal_padding = 8
+  shrink = true
+
+  markup = full
+  format = "<b>%s</b>\n%b"
+  alignment = center
+  word_wrap = true
+  separator_color = auto
+  transparency = 10
+
+  dmenu = /usr/bin/dmenu -p dunst:
+  browser = /usr/bin/firefox -new-tab
+
+  icon_position = left
+  max_icon_size = 32
+  icon_path = /dev/null
+
+  idle_threshold = 0
+  show_age_threshold = 60
+  show_indicators = false
+  hide_duplicate_count = true
+
+[shortcuts]
+  close = ctrl+space
+  close_all = ctrl+shift+space
+  history = ctrl+comma
+  context = ctrl+period
+
+[urgency_low]
+  background = "#22262e"
+  foreground = "#928374"
+  timeout = 5
+
+[urgency_normal]
+  background = "#22262e"
+  foreground = "#d8dee9"
+  timeout = 5
+
+[urgency_critical]
+  background = "#cc2421"
+  foreground = "#d8dee9"
+  timeout = 0
+
+[history-ignore-mpdnotify]
+  appname = "dunstify"
+  summary = "mpdnotify*"
+  history_ignore = yes
+
+[history-ignore-volume]
+  appname = "dunstify"
+  summary = "volume*"
+  history_ignore = yes
+
+# [play_sound]
+#  summary = "*"
+#  script = "alert"

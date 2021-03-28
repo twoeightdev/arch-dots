@@ -1,0 +1,59 @@
+## Overview
+
+* Arch linux dotfiles for [bspwm](https://github.com/baskerville/bspwm) [dwm](http://suckless.org/) & [xmonad](https://github.com/xmonad/xmonad)
+* EFISTUB Arch Linux Installation [Guide](https://github.com/hoaxdream/dots/blob/master/.github/INSTALL.md)
+* [Dependencies](https://github.com/hoaxdream/dots#dependencies)
+
+## Xmonad
+![Rice screen preview0000](https://i.imgur.com/hxUN5V0.png)
+![Rice screen preview0001](https://i.imgur.com/exIs3Ot.png)
+![Rice screen preview0002](https://i.imgur.com/O8RrjFG.png)
+
+## Dwm
+![Rice screen preview0003](https://i.imgur.com/caDawRq.png)
+![Rice screen preview0004](https://i.imgur.com/5dFAWk4.png)
+
+## Dotfiles installation
+*Dwm is the default wm, just change xinitrc if you want to use bspwm or xmonad.*
+*Read the commented lines in bootstrap scripts and change accordingly for your system*
+```javascript
+- $ git config --global user.email "YourEmailAddressHere"
+- $ git config --global user.name "YourNameHere"
+- $ git config --global pager.branch 'false'
+- $ alias dot='git --git-dir=$HOME/.config/dots/ --work-tree=$HOME'` - `add to current shell scope
+- $ echo "dots" >> .gitignore
+- $ git clone --bare https://github.com/hoaxdream/dots.git $HOME/.config/dots
+- Remove stock configuration in $HOME, else error will occur.
+- $ dot checkout
+- $ dot config --local status.showUntrackedFiles no
+- $ dot push -u origin master
+```
+ ---
+## Dependencies
+Package name | Description
+:--- | :---
+[xmonad](https://github.com/xmonad/xmonad) | tiling window manager configured in Haskell
+[dwm](http://suckless.org/) | dynamic window manager for X
+[bspwm](https://github.com/baskerville/bspwm) | tiling window manager based on binary space partitioning
+[st](http://st.suckless.org/) | simple terminal implementation for X
+[dmenu](http://tools.suckless.org/dmenu/) | dynamic menu for X
+[JetBrains](https://www.jetbrains.com/lp/mono/) | main font used
+[libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) | provides colorful emoji for dwm and dmenu
+xorg-server | X graphical server
+xorg-xinit | starts the graphical server
+picom | compositor for X11
+xwallpaper | wallpaper setting utility for X
+sxiv | simple X Image viewer
+xdg-user-dirs | manage user directories
+xclip | command line interface to the X11 clipboard
+neovim | fork of Vim aiming to improve user experience
+vifm | vim-like file manager
+dunst | lightweight notification-daemon
+ueberzug | generates image preview for vifm
+pulseaudio-alsa | audio system
+mpd | lightweight music daemon
+mpc | terminal interface for mpd
+mpv | open source and cross-platform media player
+ncmpcpp | ncurses interface for music
+zathura | minimalistic vim-like document viewer
+zathura-pdf-mupdf | PDF support for zathura
