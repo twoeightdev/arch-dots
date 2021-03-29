@@ -13,8 +13,8 @@ c.downloads.location.directory = '~/.config/dl'
 
 # Dark mode
 c.colors.webpage.darkmode.enabled = True
-
 c.colors.webpage.preferred_color_scheme = 'dark'
+c.colors.webpage.bg = 'black'
 
 # Disables smooth scrolling
 c.scrolling.smooth = False
@@ -471,6 +471,8 @@ c.aliases = {
     'wh': "open -t https://alpha.wallhaven.cc/search?q=&categories=111&purity=100&topRange=1y&sorting=toplist&order=desc&colors=336600&page=1",
     'wt': "open -t https://www.webtoons.com/en/",
     'fb': "open -t https://facebook.com/",
+    'ux': "open -t https://www.reddit.com/r/unixporn/",
+    'tr': "open -t https://1337x.to/",
     'tag': "open -t http://www.tagged.com/home.html",
     'suck': "open -t http://suckless.org/",
 }
