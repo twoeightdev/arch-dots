@@ -457,7 +457,7 @@ c.aliases = {
     "w": "session-save",
     "wq": "quit --save",
     "mpv": "spawn -d mpv --force-window=immediate {url}",
-    'gh': "open -t https://github.com/koltea",
+    'gh': "open -t https://github.com/hoaxdream",
     'wh': "open -t https://alpha.wallhaven.cc/search?q=&categories=111&purity=100&topRange=1y&sorting=toplist&order=desc&colors=336600&page=1",
     'wt': "open -t https://www.webtoons.com/en/",
     'tag': "open -t http://www.tagged.com/home.html",
