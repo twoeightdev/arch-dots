@@ -39,7 +39,6 @@ alias \
     v="$EDITOR" \
     pu="sudo pacman -Syu" \
     pss="pacman -Qs" \
-    ps="pacman -Ss" \
     pi="sudo pacman -S" \
     pr="sudo pacman -Rs" \
     pc="sudo pacman -Rns $(pacman -Qtdq)'" \

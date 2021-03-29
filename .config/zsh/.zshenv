@@ -55,7 +55,6 @@ export GOPATH="$XDG_DATA_HOME/go"
 
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
-export LESSHISTFILE="-"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
 # Shell
@@ -88,6 +87,7 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[0;44;30m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[0;32m'
+#export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 
 # Set Qt to use GTK theme
 export QT_QPA_PLATFORMTHEME="gtk2"
