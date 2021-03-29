@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pacman -Ss --color=always "$@" | less -R
