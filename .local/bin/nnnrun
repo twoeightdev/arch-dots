@@ -1,2 +1,2 @@
 #!/bin/sh
-nnn -erdH
+nnn -erdUH

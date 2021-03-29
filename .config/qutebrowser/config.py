@@ -19,6 +19,12 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # Disables smooth scrolling
 c.scrolling.smooth = False
 
+## allow websites to show notifications.
+##   * true
+##   * false
+##   * ask
+c.content.notifications = False
+
 # definitions of search engines which can be used via the address bar.
 #"DEFAULT": "https://www.google.fi/search?q={}",
 #"DEFAULT": "https://duckduckgo.com/?q={}",
@@ -423,6 +429,10 @@ config.bind("t", "set-cmd-text -s :open -t")
 config.bind("z+", "zoom-in")
 config.bind("z-", "zoom-out")
 config.bind("zz", "zoom")
+config.bind("h", "scroll-px -300 0")
+config.bind("j", "scroll-px 0 300")
+config.bind("k", "scroll-px 0 -300")
+config.bind("l", "scroll-px 300 0")
 
 config.bind('<Escape>', 'leave-mode ;; jseval -q document.activeElement.blur()', mode='insert')
 config.bind('<Ctrl-x>', 'leave-mode ;; jseval -q document.activeElement.blur()', mode='insert')
@@ -460,6 +470,7 @@ c.aliases = {
     'gh': "open -t https://github.com/hoaxdream",
     'wh': "open -t https://alpha.wallhaven.cc/search?q=&categories=111&purity=100&topRange=1y&sorting=toplist&order=desc&colors=336600&page=1",
     'wt': "open -t https://www.webtoons.com/en/",
+    'fb': "open -t https://facebook.com/",
     'tag': "open -t http://www.tagged.com/home.html",
     'suck': "open -t http://suckless.org/",
 }

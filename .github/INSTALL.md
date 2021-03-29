@@ -189,9 +189,11 @@ M | xorg-xdpyinfo | display information utility for X
 M | xorg-xset | user preference utility for X
 M | xorg-xsetroot | utility to set your root window background to a given pattern or color
 M | xorg-xinit | X initialisation program
-M | xclip | command line interface to the X11 clipboard
-M | xdotool | command-line X11 automation tool
 M | xterm | X Terminal Emulator
+M | xcape | key modifier to act as other keys
+M | xclip | command line interface to the X11 clipboard
+M | xdo | utility for performing actions on windows in X
+M | xdotool | command-line X11 automation tool
 M | nvidia | NVIDIA drivers for linux
 M | nvidia-utils | NVIDIA drivers utilities
 M | lib32-nvidia-utils | NVIDIA drivers utilities (32-bit)
@@ -233,7 +235,6 @@ M | newsboat | rss feed reader for text terminals
 M | picom | X compositor
 M | calcurse | text-based personal organizer
 M | unclutter | hides an inactive mouse
-M | xcape | key modifier to act as other keys
 M | mpd | lightweight music daemon
 M | mpc | terminal interface for mpd
 M | mpv | media player
