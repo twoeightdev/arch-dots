@@ -41,6 +41,9 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 export INPUTRC="$ZDOTDIR/inputrc"
 
 # Misc
+export HISTSIZE=1000
+export SAVEHIST=1000
+export HISTFILE="${ZDOTDIR}/.history"
 export SUDO_ASKPASS="$HOME/.local/bin/dmpass"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export _JAVA_AWT_WM_NONREPARENTING=1

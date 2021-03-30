@@ -1,9 +1,13 @@
 # Colors
-autoload -U colors && colors    # Load colors
-setopt autocd                   # Automatically cd into typed directory
-setopt share_history            # Shares all history
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups     # Ignore all duplicates in history
-stty stop undef                 # Disable ctrl-s to freeze terminal
+setopt share_history            # Shares all history
+
+# automaticly escape urls special characters
+autoload -Uz url-quote-magic bracketed-paste-magic
+zle -N self-insert url-quote-magic
+zle -N bracketed-paste bracketed-paste-magic
 
 # Git prompt with branch name
 function precmd {
@@ -21,39 +25,31 @@ zstyle ':vcs_info:git:*' formats 'on %F{red} %F{red}%b'
 setopt PROMPT_SUBST
 PROMPT='%F{yellow}%1d %F{white}≻≻≻ %F{green}${vcs_info_msg_0_}%f '
 
-# History in cache directory
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE="${ZDOTDIR}/.history"
-
 # Exclude garbage in history
 function hist() {
-    [[ "$#1" -lt 7 \
-        || "$1" = "run-help "* \
-        || "$1" = "cd "* \
-        || "$1" = "man "* \
-        || "$1" = "h "* \
-        || "$1" = "~ "* ]]
-    return $(( 1 - $? ))
+  [[ "$#1" -lt 7 \
+    || "$1" = "run-help "* \
+    || "$1" = "cd "* \
+    || "$1" = "man "* \
+    || "$1" = "h "* \
+    || "$1" = "~ "* ]]
+  return $(( 1 - $? ))
 }
 
-# Load aliases and shortcuts if existent
-[ ! -f $ZDOTDIR/sc.sh ] && shortcuts
-source $ZDOTDIR/sc.sh
-source $ZDOTDIR/aliasrc 2>/dev/null
-
-# Autotab complete
+#setopt correct_all      # autocorrect commands
 setopt completealiases
-autoload -U compinit
+setopt auto_menu         # automatically use menu completion
+setopt always_to_end     # move cursor to end if word had one match
+setopt complete_in_word  # completion from both ends
+autoload -Uz compinit && compinit -u
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list \
-  'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*' # Case-insensitive completion
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots) # Include hidden files
-REPORTTIME=1
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' ignored-patterns '.'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+_comp_options+=(globdots) # include hidden files
 
-# Vi mode
+# vi mode
 bindkey -v
 export KEYTIMEOUT=1
 local cursor_insert="\e[4 q"
@@ -79,21 +75,27 @@ zle -N zle-line-init
 print -n $cursor_insert # use beam shape cursor on startup.
 function preexec() { print -n $cursor_insert; } # use beam shape cursor for each new prompt.
 
-# Use vim keys in tab complete menu:
+# use vim keys in tab complete menu:
+zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
 
+# misc
+set -k               # allows comments in interactive shell
+setopt auto_cd       # cd by just typing the directory name
+setopt extendedglob  # additional syntax for filename generation
+[ ! -f $ZDOTDIR/sc.sh ] && shortcuts
+source $ZDOTDIR/sc.sh
+source $ZDOTDIR/aliasrc 2>/dev/null
 
-# Command not found
 function command_not_found_handler() {
   print -P "not found: %F{red}$0%f" >&2
   return 127
 }
 
-# plugins
+# Pluginz
 # fzf
 if [ ! -d ~/.config/fzf ]; then
   git clone --depth 1 https://github.com/junegunn/fzf ~/.config/fzf

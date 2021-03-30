@@ -71,6 +71,8 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
 #### Git
   - **Change remote url**
     - `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git`
+  - **Commit single file**
+    - dot commit -m "Message" ~/.config/path/file
 ---
 #### Pass
   - **Store passwd**
@@ -121,6 +123,9 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
   - `fdisk /dev/sdx`
   - `mkfs.ext4 -F -O ^64bit -L 'core' '/dev/sdx'
 ---
+#### Dunst
+- Notification settings:
+  - use `dunst -print` to show appname and summary
 #### Startpage:
   - **Set firefox homepage**
     - `/home/hoaxdream/.ansible/work/repositories/startpage/index.html`
