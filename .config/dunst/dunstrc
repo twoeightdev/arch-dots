@@ -1,6 +1,6 @@
 # vim: ft=cfg
 [global]
-  font = Monospace 14
+  font = monospace 14
   geometry = "350x5-0+24"
   padding = 2
   horizontal_padding = 8
@@ -14,7 +14,7 @@
   transparency = 10
 
   dmenu = /usr/bin/dmenu -p dunst:
-  browser = /usr/bin/firefox -new-tab
+  browser = /usr/bin/qutebrowser
 
   icon_position = left
   max_icon_size = 32

@@ -22,4 +22,4 @@
   - `Remove stock configuration in $HOME, else error will occur.`
   - `dot checkout`
   - `dot config --local status.showUntrackedFiles no`
-  - `dot push -u origin master`
+  - `dot push -u origin main`
