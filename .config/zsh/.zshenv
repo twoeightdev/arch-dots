@@ -32,7 +32,7 @@ export NNN_BMS='h:~;d:~/.config/dl;w:~/.config/work/repos;b:~/.local/bin;s:~/.lo
 export NNN_PLUG='t:_tsxiv $nnn*;f:_nperm $nnn*;x:_xperm $nnn*;u:_uperm $nnn*'
 export NNN_OPENER=nnnopen
 export NNN_USE_EDITOR=1
-export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
+export NNN_FCOLORS='c1e2252e006033f7c6d6abc4'
 export NNN_FIFO="/tmp/nnn.fifo"
 
 # Relocate variables
