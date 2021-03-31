@@ -2,10 +2,8 @@
 # vim: ft=sh
 #
 # ufetch-gentoo - tiny system info for gentoo
-
 ## INFO
 distro=$(lsb_release -sd)
-
 distro=${distro##[\"\']}
 distro=${distro%%[\"\']}
 

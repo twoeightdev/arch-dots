@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # A general, all-purpose extraction script.
 # Default behavior: Extract archive into new directory
 # Behavior with `-c` option: Extract contents into current directory

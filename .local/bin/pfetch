@@ -1,7 +1,5 @@
 #!/bin/sh
-#
 # pfetch - Simple POSIX sh fetch script.
-
 log() {
     # End here if no data was found.
     [ "$2" ] || return

@@ -1,7 +1,5 @@
 #!/usr/bin/env dash
-
 set -e
-
 # sync portage tree(eix-sync is recommended)
 eix-sync
 # upgrade whole system

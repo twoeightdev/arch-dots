@@ -1,6 +1,4 @@
 #!/bin/sh
-
 # Find file and open using v.
-
 file="$(find "$HOME" -type f,l | fzf)"
 [ "$file" ] && fze "$file"

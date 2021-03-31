@@ -1,15 +1,18 @@
 #!/bin/sh
 # Write/remove a task to do later.
-#
 # Select an existing entry to remove it from the file, or type a new entry to
 # add it.
+blue=$(xgetres color4)
+bg=$(xgetres foreground)
+fg=$(xgetres background)
+mf=$(xgetres font)
 
 file="$HOME/.local/share/note.list"
 touch "$file"
 height=$(wc -l "$file" | awk '{print $1}')
 prompt="Add/delete a task: "
 
-cmd=$(dmenu -fn Monospace-12 -nb "#22262e" -sb "#bf616a" -nf "#d8dee9" -l "$height" -p "$prompt" "$@" < "$file")
+cmd=$(dmenu -fn $mf -nb $bg -sb $blue -nf $fg -l "$height" -p "$prompt" "$@" < "$file")
 while [ -n "$cmd" ]; do
     if grep -q "^$cmd\$" "$file"; then
         grep -v "^$cmd\$" "$file" > "$file.$$"

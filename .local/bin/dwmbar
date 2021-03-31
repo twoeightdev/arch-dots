@@ -1,5 +1,4 @@
 #!/bin/sh
-
 SEP='|'
 interval=1
 rxs=0
@@ -21,7 +20,7 @@ printf "%s" "$SEP1"
 
 # printf " %s $SEP  %s" "$(date "+%I:%M %p")" "$(date "+%Y-%m-%d")"
 _date() {
-  printf "$(date "+%a %d %b %I:%M:%S %p")"
+  printf "$(date "+%a-%d-%b|%I:%M:%S %p")"
 }
 
 torrents() {
@@ -74,7 +73,7 @@ while true; do
 }
 
 # Status
-xsetroot -name " $(pulseaudio) $SEP $(torrents) ${rxs}kb|${txs}kb $SEP WEATHER:${WEATHER} $SEP MEM-${MEMUSED} $SEP GPU-${GPU_TEMP}°C $SEP ${CPU_TEMP} $SEP $(_date) "
+xsetroot -name " $(pulseaudio) $SEP $(torrents) ꜜ${rxs}kb|ꜛ${txs}kb $SEP WEATHER:${WEATHER} $SEP MEM-${MEMUSED} $SEP GPU-${GPU_TEMP}°C $SEP ${CPU_TEMP} $SEP $(_date) "
 
 # internet
 
