@@ -3,7 +3,7 @@
 config.load_autoconfig()
 
 # Start page
-c.url.start_pages = ['~/.config/qutebrowser/start.html']
+c.url.start_pages = ['~/.config/startpage/index.html']
 
 # Set default editor.
 c.editor.command = ["st", "-e", "nvim '{}'"]
@@ -11,9 +11,11 @@ c.editor.command = ["st", "-e", "nvim '{}'"]
 # Download path
 c.downloads.location.directory = '~/.config/dl'
 
-# Dark mode
-c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.preferred_color_scheme = 'dark'
+# Dark mode 
+# This will break my startpage - c.colors.webpage.darkmode.enabled = True
+
+#c.colors.webpage.darkmode.enabled = True
+#c.colors.webpage.preferred_color_scheme = 'dark'
 c.colors.webpage.bg = 'black'
 
 # Disables smooth scrolling
@@ -473,6 +475,7 @@ c.aliases = {
     'fb': "open -t https://facebook.com/",
     'ux': "open -t https://www.reddit.com/r/unixporn/",
     'tr': "open -t https://1337x.to/",
+    'cc': "open -t https://jonasjacek.github.io/colors/",
     'tag': "open -t http://www.tagged.com/home.html",
     'suck': "open -t http://suckless.org/",
 }
