@@ -56,7 +56,6 @@ alias \
     gd="git diff" \
     grc="git reset --hard HEAD^" \
     gra="git reset HEAD" \
-    d="dot" \
     da="dot add" \
     dc="dot commit -m" \
     dcm="dot commit -am" \

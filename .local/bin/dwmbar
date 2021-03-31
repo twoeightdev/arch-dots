@@ -11,16 +11,17 @@ printf "%s" "$SEP1"
     if [ "$VOL" = "muted" ] || [ "$VOL" -eq 0 ]; then
         printf "婢"
     elif [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
-        printf "奔 %s%%" "$VOL"
+        printf " %s%%" "$VOL"
     elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
-        printf "墳 %s%%" "$VOL"
+        printf " %s%%" "$VOL"
     else
         printf " %s%%" "$VOL"
     fi
 }
 
+# printf " %s $SEP  %s" "$(date "+%I:%M %p")" "$(date "+%Y-%m-%d")"
 _date() {
-  printf " %s $SEP  %s" "$(date "+%I:%M %p")" "$(date "+%Y-%m-%d")"
+  printf "$(date "+%a %d %b %I:%M:%S %p")"
 }
 
 torrents() {
@@ -43,12 +44,22 @@ EOF
     transmission-remote -l | grep -qE "%|n/a" && printf " %s" "$SEP"
 }
 
+# Weather
+LOCATION='San Roque San Pedro Laguna'
+while true; do
+  curl -s "https://wttr.in/${LOCATION}?format=1" > $HOME/.cache/Weather.tmp
+  sleep 300
+done &
+
 while true; do
   # Network Interface Name
   interface=$(ip route get 8.8.8.8 2>/dev/null| awk '{print $5}')
 
   # CPU
   CPU_TEMP=$(sensors | awk '/Core 0/ {print "CPU" $3}')
+
+  # Weather
+  WEATHER=$(cat $HOME/.cache/Weather.tmp | awk '{print $2}')
 
   # GPU
   GPU_TEMP=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits)
@@ -63,7 +74,7 @@ while true; do
 }
 
 # Status
-xsetroot -name " $(pulseaudio) $SEP $(torrents) ${rxs}kb|${txs}kb $SEP MEM-${MEMUSED} $SEP GPU-${GPU_TEMP}°C $SEP ${CPU_TEMP} $SEP $(_date) "
+xsetroot -name " $(pulseaudio) $SEP $(torrents) ${rxs}kb|${txs}kb $SEP WEATHER:${WEATHER} $SEP MEM-${MEMUSED} $SEP GPU-${GPU_TEMP}°C $SEP ${CPU_TEMP} $SEP $(_date) "
 
 # internet
 
