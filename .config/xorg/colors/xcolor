@@ -1,42 +1,42 @@
-!! Nord Xresources palette
-*.foreground: #D8DEE9
-*.background: #22262e
-*.color0:     #3B4252
-*.color1:     #BF616A
-*.color2:     #A3BE8C
-*.color3:     #EBCB8B
-*.color4:     #81A1C1
-*.color5:     #B48EAD
-*.color6:     #88C0D0
-*.color7:     #E5E9F0
-*.color8:     #4C566A
-*.color9:     #BF616A
-*.color10:    #A3BE8C
-*.color11:    #EBCB8B
-*.color12:    #81A1C1
-*.color13:    #B48EAD
-*.color14:    #8FBCBB
-*.color15:    #ECEFF4
+/* !! Nord Xresources palette */
+/* *.foreground: #D8DEE9 */
+/* *.background: #22262e */
+/* *.color0:     #3B4252 */ black */
+/* *.color1:     #BF616A */ red */
+/* *.color2:     #A3BE8C */ green */
+/* *.color3:     #EBCB8B */ yellow */
+/* *.color4:     #81A1C1 */ blue */
+/* *.color5:     #B48EAD */ magenta */
+/* *.color6:     #88C0D0 */ cyan */
+/* *.color7:     #E5E9F0 */ white */
+/* *.color8:     #4C566A */ black */
+/* *.color9:     #BF616A */ red */
+/* *.color10:    #A3BE8C */ green */
+/* *.color11:    #EBCB8B */ yellow */
+/* *.color12:    #81A1C1 */ blue */
+/* *.color13:    #B48EAD */ magenta */
+/* *.color14:    #8FBCBB */ cyan */
+/* *.color15:    #ECEFF4 */ white */
 
-/* !! Gruvbox Xresources pallete */
-/* *.foreground: #1d2021 */
-/* *.background: #ebdbb2 */
-/* *.color0:     #1d2021 */
-/* *.color1:     #cc241d */
-/* *.color2:     #98971a */
-/* *.color3:     #d79921 */
-/* *.color4:     #458588 */
-/* *.color5:     #b16286 */
-/* *.color6:     #689d6a */
-/* *.color7:     #a89984 */
-/* *.color8:     #928374 */
-/* *.color9:     #fb4934 */
-/* *.color10:    #b8bb26 */
-/* *.color11:    #fabd2f */
-/* *.color12:    #83a598 */
-/* *.color13:    #d3869b */
-/* *.color14:    #8ec07c */
-/* *.color15:    #ebdbb2 */
+!! Gruvbox Xresources pallete
+*.foreground: #ebdbb2
+*.background: #1d2021
+*.color0:     #1d2021
+*.color1:     #cc241d
+*.color2:     #98971a
+*.color3:     #d79921
+*.color4:     #458588
+*.color5:     #b16286
+*.color6:     #689d6a
+*.color7:     #a89984
+*.color8:     #928374
+*.color9:     #fb4934
+*.color10:    #b8bb26
+*.color11:    #fabd2f
+*.color12:    #83a598
+*.color13:    #d3869b
+*.color14:    #8ec07c
+*.color15:    #ebdbb2
 
 /* !! Iceberg Xresources palette */
 /* *.foreground: #c6c8d1 */
