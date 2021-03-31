@@ -18,7 +18,7 @@ XTerm*utf8: 1
 XTerm*loginShell: true
 XTerm*internalBorder: 17
 XTerm*font: monospace
-XTerm*faceName: monospace:size=11
+XTerm*faceName: monospace:size=12
 XTerm*renderFont: true
 XTerm*cursorBlink: false
 XTerm*ScrollBar: false
