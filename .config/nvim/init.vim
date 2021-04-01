@@ -19,6 +19,8 @@ set bg=light                   " Set background
 set nohlsearch                 " Highlighted search
 set noshowmode                 " Disable INSERT mode showing up
 set noruler
+"set cursorline                 " Highlight current line
+"set cursorcolumn               " Horizontal cursor line
 set laststatus=2
 set noshowcmd                  " Disable line or column number
 set nowrap                     " Display long lines as just one line
@@ -61,7 +63,6 @@ call plug#end()
 
 " Disables automatic commenting on newline:
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 
 " Source and load plugins configurations
 source $HOME/.config/nvim/pconf/keymaps.vim
