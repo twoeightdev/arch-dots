@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # vim: ft=sh
-#
 # ufetch-gentoo - tiny system info for gentoo
-## INFO
 distro=$(lsb_release -sd)
 distro=${distro##[\"\']}
 distro=${distro%%[\"\']}
@@ -15,7 +13,7 @@ packages="$(pacman -Qqs | wc -l)"
 shell="$(basename "$SHELL")"
 term="$TERMINAL"
 
-## UI DETECTION
+# desktop environment
 
 if [ -n "${DE}" ]; then
   ui="${DE}"
@@ -40,9 +38,7 @@ else
   uitype='UI'
 fi
 
-## DEFINE COLORS
-
-# probably don't change these
+# define colors, probably don't change these
 if [ -x "$(command -v tput)" ]; then
   bold="$(tput bold)"
   black="$(tput setaf 0)"
@@ -68,9 +64,7 @@ r5="${reset}${bold}${red}"          # red
 c3="${reset}${bold}${cyan}"         # cyan
 y9="${reset}${bold}${yellow}"       # yellow
 
-## OUTPUT
-
-####################Ahegao
+# output
 cat <<EOF
 ${nc}${USER}${nc}@${nc}${host}${reset}
 ${b7}OS:        ${ic}${distro}${reset}

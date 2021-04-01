@@ -1,7 +1,7 @@
 #!/bin/sh
-# A general, all-purpose extraction script.
-# Default behavior: Extract archive into new directory
-# Behavior with `-c` option: Extract contents into current directory
+# a general, all-purpose extraction script.
+# default behavior: extract archive into new directory
+# behavior with `-c` option: extract contents into current directory
 
 while getopts "hc" o; do case "${o}" in
   c) extracthere="True" ;;

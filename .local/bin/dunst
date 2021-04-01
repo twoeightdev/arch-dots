@@ -1,4 +1,5 @@
 #!/bin/sh
+# sets dunst notification default color including dunstify
 red=$(xgetres color1)
 bg=$(xgetres background)
 fg=$(xgetres foreground)
