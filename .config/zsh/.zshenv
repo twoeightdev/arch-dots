@@ -29,7 +29,7 @@ export WM="dwm"
 
 # nnn
 export NNN_BMS='h:~;d:~/.config/dl;w:~/.config/work/repos;b:~/.local/bin;s:~/.local/share;c:~/.config;m:/media;f:/media/data;x:/media/core;p:/media/data/pix/walls'
-export NNN_PLUG='t:_tsxiv $nnn*;f:_nperm $nnn*;x:_xperm $nnn*;u:_uperm $nnn*'
+export NNN_PLUG='o:_olpic $nnn*;t:_trash $nnn*;f:_nperm $nnn*;x:_xperm $nnn*;u:_uperm $nnn*'
 export NNN_OPENER=nnnopen
 export NNN_USE_EDITOR=1
 export NNN_FCOLORS='c1e2252e006033f7c6d6abc4'
