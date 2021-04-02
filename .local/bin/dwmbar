@@ -18,9 +18,11 @@ printf "%s" "$SEP1"
     fi
 }
 
-# printf " %s $SEP  %s" "$(date "+%I:%M %p")" "$(date "+%Y-%m-%d")"
+# printf " %s $SEP  %s" "$(date "+%I:%M %p")" "$(date "+%b-%d-%A")"
+# printf "$(date "+%a-%d-%b|%I:%M:%S %p")"
+# printf " %s-%s $SEP  %s" "$(date "+%I:%M%p")" "$(TZ='Asia/Riyadh' date "+%I:%M%p")" "$(date "+%b-%d-%A")"
 _date() {
-  printf "$(date "+%a-%d-%b|%I:%M:%S %p")"
+  printf " %s-%s $SEP  %s" "$(TZ='Asia/Riyadh' date "+%I:%M%p")" "$(date "+%I:%M%p")" "$(date "+%b-%d-%A")"
 }
 
 torrents() {
@@ -41,6 +43,11 @@ torrents() {
     $data
 EOF
     transmission-remote -l | grep -qE "%|n/a" && printf " %s" "$SEP"
+}
+
+mpd() {
+  music="$(mpc current -f "%artist% - %title%")"
+  [ "$music" ] && printf " %s %s" "$music" "$SEP"
 }
 
 # Weather
@@ -66,14 +73,8 @@ while true; do
   # Used and total memory
   MEMUSED=$(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2fGiB\n", ( $3 / 1024))}')
 
-  # MPD
-  mpd() {
-      music="$(mpc current -f "%artist% - %title%")"
-      [ "$music" ] && printf " %s %s" "$music" "$SEP"
-}
-
 # Status
-xsetroot -name " $(pulseaudio) $SEP $(torrents) ꜜ${rxs}kb|ꜛ${txs}kb $SEP WEATHER:${WEATHER} $SEP MEM-${MEMUSED} $SEP GPU-${GPU_TEMP}°C $SEP ${CPU_TEMP} $SEP $(_date) "
+xsetroot -name " $(pulseaudio) $SEP ${rxs}kb|祝${txs}kb $(torrents) $SEP WEATHER:${WEATHER} $SEP MEM-${MEMUSED} $SEP GPU-${GPU_TEMP}°C $SEP ${CPU_TEMP} $SEP $(_date) "
 
 # internet
 
