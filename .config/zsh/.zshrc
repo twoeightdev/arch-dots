@@ -1,4 +1,4 @@
-# Colors
+# colors
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups     # Ignore all duplicates in history
@@ -9,7 +9,7 @@ autoload -Uz url-quote-magic bracketed-paste-magic
 zle -N self-insert url-quote-magic
 zle -N bracketed-paste bracketed-paste-magic
 
-# Git prompt with branch name
+# git prompt with branch name
 function precmd {
     if [[ "$NEW_LINE" = true ]] then
         print ""
@@ -25,7 +25,7 @@ zstyle ':vcs_info:git:*' formats 'on %F{red} %F{red}%b'
 setopt PROMPT_SUBST
 PROMPT='%F{yellow}%1d %F{white}≻≻≻ %F{green}${vcs_info_msg_0_}%f '
 
-# Exclude garbage in history
+# exclude garbage in history
 function hist() {
   [[ "$#1" -lt 7 \
     || "$1" = "run-help "* \
@@ -95,7 +95,7 @@ function command_not_found_handler() {
   return 127
 }
 
-# Pluginz
+# pluginz
 # fzf
 if [ ! -d ~/.config/fzf ]; then
   git clone --depth 1 https://github.com/junegunn/fzf ~/.config/fzf
@@ -104,9 +104,13 @@ fi
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 
-# fzf
-fcd() {
+# cd to directory in home
+cdc() {
   cd "$(find -type d | fzf)"
+}
+# cd to directory in /media/data
+cdf() {
+  cd "$(find "/media/data/" -type d | fzf)"
 }
 open() {
   xdg-open "$(find -type f | fzf)"
