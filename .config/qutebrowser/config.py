@@ -28,6 +28,7 @@ c.aliases = {
     'ux': "open -t https://www.reddit.com/r/unixporn/",
     'tr': "open -t https://1337x.to/",
     'cc': "open -t https://jonasjacek.github.io/colors/",
+    'md': "open -t https://mp3quack.lol/",
     'tag': "open -t http://www.tagged.com/home.html",
     'suck': "open -t http://suckless.org/",
 }
