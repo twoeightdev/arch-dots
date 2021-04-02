@@ -33,11 +33,13 @@ c.aliases = {
     'suck': "open -t http://suckless.org/",
 }
 
-#c.colors.webpage.darkmode.enabled = True  # This will break my startpage
-#c.colors.webpage.preferred_color_scheme = 'dark'
+# Enable this if using style2.css in startpage
+c.colors.webpage.darkmode.enabled = True  # This will break my startpage
+c.colors.webpage.preferred_color_scheme = 'dark'
 c.colors.webpage.bg = 'black'
 
 c.url.start_pages = ['~/.config/startpage/index.html']
+#c.url.start_pages = ['~/.config/qutebrowser/start.html']
 c.editor.command = ["st", "-e", "nvim '{}'"]
 c.downloads.location.directory = '~/.config/dl'
 c.downloads.location.prompt = False
