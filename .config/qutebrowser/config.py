@@ -59,7 +59,7 @@ c.content.autoplay = False
 c.content.pdfjs = True
 
 # define font and colors values
-monospace = "16px 'Noto Sans Mono'"
+monospace = "16px 'IBM Plex Mono'"
 bg = "#1d2021"
 fg = "#ebdbb2"
 base01 = "#1d2021" # black
