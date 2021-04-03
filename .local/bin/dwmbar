@@ -22,7 +22,7 @@ printf "%s" "$SEP1"
 # printf "$(date "+%a-%d-%b|%I:%M:%S %p")"
 # printf " %s-%s $SEP  %s" "$(date "+%I:%M%p")" "$(TZ='Asia/Riyadh' date "+%I:%M%p")" "$(date "+%b-%d-%A")"
 _date() {
-  printf " %s-%s $SEP  %s" "$(TZ='Asia/Riyadh' date "+%I:%M%p")" "$(date "+%I:%M%p")" "$(date "+%b-%d-%A")"
+  printf " %s-%s $SEP  %s" "$(TZ='Asia/Riyadh' date "+%I:%M%p")" "$(date "+%I:%M%p")" "$(date "+%b-%d-%a")"
 }
 
 torrents() {
