@@ -1,6 +1,6 @@
 # colors
-setopt extended_history       # record timestamp of command in HISTFILE
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt extended_history         # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first   # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_all_dups     # Ignore all duplicates in history
 setopt share_history            # Shares all history
 
