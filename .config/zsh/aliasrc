@@ -38,6 +38,7 @@ alias \
     e="$FILE" \
     v="$EDITOR" \
     pu="sudo pacman -Syu" \
+    ps="pacman -Ss" \
     pss="pacman -Qs" \
     pi="sudo pacman -S" \
     pr="sudo pacman -Rs" \
