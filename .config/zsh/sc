@@ -1,12 +1,13 @@
-ac ~/.cache
+ch ~/.cache
 c   ~/.config
-s   ~/.local/share
-dl  ~/.config/dl
-w   ~/.config/work
+bs   ~/.local/share
+bd  ~/.config/dl
+bw   ~/.config/work
+bb   ~/.local/bin
 mn  /mnt
-b   ~/.local/bin
-h   $HOME
-hc  /media/core
-hd  /media/data
-hw  /media/data/pix/walls
-hb  /media/data/linux_data/backups
+bx  /media/core
+bf  /media/data
+bp  /media/data/pix/walls
+bl  /media/data/linux_data/backups
+bh   ~/
+
