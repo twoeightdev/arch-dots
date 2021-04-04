@@ -172,7 +172,23 @@ include = /etc/pacman.d/mirrorlist
   - $ sudo pacman -Syu
 ```
 ---
-#### Installation of packages
+#### Install automatically with script
+- **Bootstrap script**
+```
+  - $ sudo pacman -S git
+  - $ git clone https://github.com/hoaxdream/bootstrap
+  - $ cd bootstrap
+  - $ ./pkgsinstall
+  - $ reboot
+  - $ ./dotsetup
+  - $ sudo ./postinstall
+  - $ reboot
+  - $ startx
+  - $ sudo -E systemctl edit --full systemd-fsck-root.service
+  - $ sudo -E systemctl edit --full systemd-fsck@.service
+  - $ reboot
+```
+#### Installation of packages manually
 - **Arch AUR helper**
 ```
   - $ curl -LO https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
