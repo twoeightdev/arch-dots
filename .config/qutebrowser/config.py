@@ -1,5 +1,6 @@
 # load settings added with ui
 # see <https://github.com/qutebrowser/qutebrowser/blob/master/doc/help/configuring.asciidoc#loading-autoconfigyml>
+# to se all configuration type :set inside qutebrowser.
 config.load_autoconfig()
 
 # search engines
@@ -28,6 +29,8 @@ c.aliases = {
     'ux': "open -t https://www.reddit.com/r/unixporn/",
     'tr': "open -t https://1337x.to/",
     'cc': "open -t https://jonasjacek.github.io/colors/",
+    'od': "open -t https://odysee.com/",
+    'bc': "open -t https://based.cooking/",
     'md': "open -t https://mp3quack.lol/",
     'tag': "open -t http://www.tagged.com/home.html",
     'suck': "open -t http://suckless.org/",
@@ -57,9 +60,19 @@ c.downloads.remove_finished = 1000
 c.hints.scatter = True
 c.content.autoplay = False
 c.content.pdfjs = True
+c.content.fullscreen.overlay_timeout = 0
+c.content.fullscreen.window = True
+c.zoom.default = 125
 
-# define font and colors values
-monospace = "16px 'IBM Plex Mono'"
+# font and define colors values
+#monospace = "14px 'IBM Plex Mono'"
+c.fonts.default_family = 'IBM Plex Mono'
+c.fonts.default_size = '14px'
+c.fonts.web.family.cursive = 'IBM Plex Mono'
+c.fonts.web.family.sans_serif = 'IBM Plex Mono'
+c.fonts.web.family.serif = 'IBM Plex Mono'
+c.fonts.completion.category = "bold 14px default_family"
+#c.fonts.completion.category = f"bold {monospace}"
 bg = "#1d2021"
 fg = "#ebdbb2"
 base01 = "#1d2021" # black
@@ -78,18 +91,6 @@ base13 = "#83a598" # blue
 base14 = "#d3869b" # magenta
 base15 = "#8ec07c" # cyan
 base16 = "#ebdbb2" # white
-
-c.fonts.completion.category = f"bold {monospace}"          # font used in the completion categories
-c.fonts.completion.entry = monospace                       # font used in the completion widget
-c.fonts.debug_console = monospace                          # font used for the debugging console
-c.fonts.downloads = monospace                              # font used for the downloadbar
-c.fonts.keyhint = monospace                                # font used in the keyhint widget
-c.fonts.messages.error = monospace                         # font used for error messages
-c.fonts.messages.info = monospace                          # font used for info messages
-c.fonts.messages.warning = monospace                       # font used for warning messages
-c.fonts.prompts = monospace                                # font used for prompts
-c.fonts.statusbar = monospace                              # font used in the statusbar
-c.fonts.hints = monospace                                  # font used for the hints
 
 # context menu
 c.colors.contextmenu.menu.bg = bg
