@@ -32,7 +32,7 @@ if [ "$volume" = 0 ] || [ "$mute" = "true" ]; then
 else
     # volume notification
     dunstify -a volume -u low -i notification-audio-volume-high -r "$msgId" \
-        " Volume: ${volume}%" "$("$self"/getProgressString 10 " " " " "$volume")"
+        " Volume: ${volume}%" "$("$self"/getProgressString 8 " " " " "$volume")"
 fi
 
 # Play sound
