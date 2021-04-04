@@ -71,6 +71,8 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
 #### Git
   - **Change remote url**
     - `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git`
+    - `git branch -M main`
+    - `git push -u origin main`
   - **Commit single file**
     - dot commit -m "Message" ~/.config/path/file
 ---
