@@ -1,6 +1,6 @@
 " palette
 let g:dark = {}
-let g:dark.black    =  [0,  '#32302f']
+let g:dark.black    =  [0,  '#1d2021']
 let g:dark.red      =  [1,  '#cc241d']
 let g:dark.green    =  [2,  '#98971a']
 let g:dark.yellow   =  [3,  '#d79921']
