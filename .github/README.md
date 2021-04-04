@@ -27,77 +27,80 @@
 ```
  ---
 ## Dependencies
-Package name | Description
-:--- | :---
-[xmonad](https://github.com/xmonad/xmonad) | tiling window manager configured in Haskell
-[dwm](http://suckless.org/) | dynamic window manager for X
-[bspwm](https://github.com/baskerville/bspwm) | tiling window manager based on binary space partitioning
-[st](http://st.suckless.org/) | simple terminal implementation for X
-[dmenu](http://tools.suckless.org/dmenu/) | dynamic menu for X
-[Noto Sans Mono](https://archlinux.org/packages/extra/any/noto-fonts/) | main font used
-[libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) | provides colorful emoji for dwm and dmenu
-[nnn](https://github.com/jarun/nnn) | fastest terminal file manager
-xorg-server | X graphical server
-xorg-xwininfo | print information about windows on an X server
-xorg-xprop | property disaplyer for X
-xorg-xdpyinfo | display information utility for X
-xorg-xset | user preference utility for X
-xorg-xsetroot | utility to set your root window background to a given pattern or color
-xorg-xinit | X initialisation program
-xterm | X Terminal Emulator
-xcape | key modifier to act as other keys
-xclip | command line interface to the X11 clipboard
-xdo | utility for performing actions on windows in X
-xdotool | command-line X11 automation tool
-nvidia | NVIDIA drivers for linux
-nvidia-utils | NVIDIA drivers utilities
-lib32-nvidia-utils | NVIDIA drivers utilities (32-bit)
-nvidia-settings | tool for configuring the NVIDIA graphics driver
-vulkan-icd-loader | vulkan Installable Client Driver (ICD) Loader
-lib32-vulkan-icd-loader | vulkan Installable Client Driver (ICD) Loader (32-bit)
-mlocate | updatedb implementation
-man-db | utility for reading man pages
-git | fast distributed version control system
-wget | network utility to retrieve files from the web
-highlight | fast and flexible source code highlighter (CLI version)
-gnome-keyring | stores passwords and encryption keys
-python-pynvim | python client for neovim
-python-adblock | brave adblock for qutebrowser
-zip | compressor/archiver for creating and modifying zipfiles
-unzip | for extracting and viewing files in .zip archives
-unrar | RAR uncompression program
-dosfstools | DOS filesystem utilities
-ntfs-3g | NTFS filesystem driver and utilities
-xdg-user-dirs | manage user directories
-mediainfo | show tag information about a video/audio file (CLI interface)
-transmission-cli | cli BitTorrent client
-bc | arbitrary precision calculator language
-tree | directory listing program displaying a depth indented list of files
-pulseaudio-alsa | ALSA Configuration for PulseAudio
-pulsemixer | CLI and curses mixer for pulseaudio
-pamixer | Pulseaudio command-line mixer like amixer
-ttf-joypixels ttf-nerd-fonts-symbols noto-fonts-emoji | emoji/symbol font
-ttf-dejavu ttf-liberation | fonts used in my dotfiles
-youtube-dl | command-line to download videos from youTube and a few more sites
-ffmpeg | recording utility for video and audio on the command line
-maim | utility to take a screenshot
-sxiv | simple X image viewer
-xwallpaper | wallpaper setting utility for X
-imagemagick | image viewing/manipulation program
-newsboat | rss feed reader for text terminals
-picom | X compositor
-unclutter | hides an inactive mouse
-mpd | lightweight music daemon
-mpc | terminal interface for mpd
-mpv | media player
-ncmpcpp | ncurses interface for music
-zathura | pdf viewer
-zathura-pdf-mupdf | allows mupdf pdf compatibility in zathura
-poppler | manipulates .pdfs and gives .pdf previews
-dunst | lightweight notification-daemon
-libnotify | library for sending desktop notifications
-gucharmap | gnome unicode charmap
-qutebrowser | vim-like browser based on PyQt5
-steam | valve's digital software delivery system
-signal-desktop | private messenger
-tremc | curses interface for transmission
+**Tag** | **Package** | **Description**
+| :---: | :---: | :---: |
+M | [xmonad](https://github.com/xmonad/xmonad) | tiling window manager configured in Haskell
+G | [dwm](http://suckless.org/) | dynamic window manager for X
+M | [bspwm](https://github.com/baskerville/bspwm) | tiling window manager based on binary space partitioning
+G | [st](http://st.suckless.org/) | simple terminal implementation for X
+G | [dmenu](http://tools.suckless.org/dmenu/) | dynamic menu for X
+A | [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) | provides colorful emoji for dwm and dmenu
+G | [nnn](https://github.com/jarun/nnn) | fastest terminal file manager
+M | xorg-server | graphical server
+M | xorg-xwininfo | print information about windows on an X server
+M | xorg-xprop | property disaplyer for X
+M | xorg-xdpyinfo | display information utility for X
+M | xorg-xset | user preference utility for X
+M | xorg-xsetroot | utility to set your root window background to a given pattern or color
+M | xorg-xinit | X initialisation program
+M | xterm | X Terminal Emulator
+M | xcape | key modifier to act as other keys
+M | xclip | command line interface to the X11 clipboard
+M | xdo | utility for performing actions on windows in X
+M | xdotool | command-line X11 automation tool
+M | nvidia | NVIDIA drivers for linux
+M | nvidia-utils | NVIDIA drivers utilities
+M | lib32-nvidia-utils | NVIDIA drivers utilities (32-bit)
+M | nvidia-settings | tool for configuring the NVIDIA graphics driver
+M | vulkan-icd-loader | vulkan Installable Client Driver (ICD) Loader
+M | lib32-vulkan-icd-loader | vulkan Installable Client Driver (ICD) Loader (32-bit)
+M | mlocate | updatedb implementation
+M | man-db | utility for reading man pages
+M | git | fast distributed version control system
+M | wget | network utility to retrieve files from the web
+M | highlight | fast and flexible source code highlighter (CLI version)
+M | gnome-keyring | stores passwords and encryption keys
+M | python-pynvim | python client for neovim
+M | python-adblock | brave adblock for qutebrowser
+M | zip | compressor/archiver for creating and modifying zipfiles
+M | unzip | for extracting and viewing files in .zip archives
+M | unrar | RAR uncompression program
+M | dosfstools | DOS filesystem utilities
+M | ntfs-3g | NTFS filesystem driver and utilities
+M | xdg-user-dirs | manage user directories
+M | mediainfo | show tag information about a video/audio file (CLI interface)
+M | transmission-cli | cli BitTorrent client
+M | bc | arbitrary precision calculator language
+M | tree | directory listing program displaying a depth indented list of files
+M | pulseaudio-alsa | ALSA Configuration for PulseAudio
+M | pulsemixer | CLI and curses mixer for pulseaudio
+M | pamixer | Pulseaudio command-line mixer like amixer
+M | ttf-joypixels ttf-nerd-fonts-symbols noto-fonts-emoji | emoji/symbol font
+M | ttf-dejavu ttf-liberation noto-fonts ttf-roboto-mono ttf-ibm-plex | fonts used in my dotfiles
+M | youtube-dl | command-line to download videos from youTube and a few more sites
+M | youtube-viewer | command line utility for viewing youTube videos
+M | ffmpeg | recording utility for video and audio on the command line
+M | maim | utility to take a screenshot
+M | sxiv | simple X image viewer
+M | xwallpaper | wallpaper setting utility for X
+M | imagemagick | image viewing/manipulation program
+M | vifm | file manager with curses interface
+M | newsboat | rss feed reader for text terminals
+M | picom | X compositor
+M | calcurse | text-based personal organizer
+M | unclutter | hides an inactive mouse
+M | mpd | lightweight music daemon
+M | mpc | terminal interface for mpd
+M | mpv | media player
+M | ncmpcpp | ncurses interface for music
+M | zathura | pdf viewer
+M | zathura-pdf-mupdf | allows mupdf pdf compatibility in zathura
+M | poppler | manipulates .pdfs and gives .pdf previews
+M | dunst | lightweight notification-daemon
+M | libnotify | library for sending desktop notifications
+M | gucharmap | gnome unicode charmap
+M | qutebrowser | vim-like browser based on PyQt5
+M | steam | valve's digital software delivery system
+M | signal-desktop | private messenger
+A | libxft-bgra | fix crashing when viewing color emojis
+A | tremc | curses interface for transmission
