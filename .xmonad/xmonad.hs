@@ -126,7 +126,7 @@ myKeys =
     , ("M-<F9>", spawn "dmount")                                             -- mount drive
     , ("M-<F10>", spawn "dumount")                                           -- umount drive
     , ("M-S-m", spawn "dmanterm")                                            -- man-page in terminal
-    , ("M-z", spawn "dzathura")                                           -- man-page in zathura
+    , ("M-z", spawn "dzathura")                                              -- man-page in zathura
     , ("M-<Insert>", spawn "showclip")                                       -- toggle clipboard
     , ("M-`", spawn "dunicode")                                              -- emoji in dmenu
     , ("M-S-n", spawn "dnote")                                               -- dmenu notes
