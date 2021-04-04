@@ -60,6 +60,7 @@ call plug#end()
   autocmd BufWritePost dunstrc !pkill dunst; dunst &
   autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
   autocmd BufWritePost init.vim,statusline.vim source $MYVIMRC
+  autocmd BufWritePost sc !shortcuts
 
 " Disables automatic commenting on newline:
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
