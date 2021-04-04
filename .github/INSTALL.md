@@ -198,6 +198,13 @@ include = /etc/pacman.d/mirrorlist
 ```
 **Tag** | **Package** | **Description**
 | :---: | :---: | :---: |
+M | [xmonad](https://github.com/xmonad/xmonad) | tiling window manager configured in Haskell
+G | [dwm](http://suckless.org/) | dynamic window manager for X
+M | [bspwm](https://github.com/baskerville/bspwm) | tiling window manager based on binary space partitioning
+G | [st](http://st.suckless.org/) | simple terminal implementation for X
+G | [dmenu](http://tools.suckless.org/dmenu/) | dynamic menu for X
+A | [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) | provides colorful emoji for dwm and dmenu
+G | [nnn](https://github.com/jarun/nnn) | fastest terminal file manager
 M | xorg-server | graphical server
 M | xorg-xwininfo | print information about windows on an X server
 M | xorg-xprop | property disaplyer for X
@@ -238,7 +245,7 @@ M | pulseaudio-alsa | ALSA Configuration for PulseAudio
 M | pulsemixer | CLI and curses mixer for pulseaudio
 M | pamixer | Pulseaudio command-line mixer like amixer
 M | ttf-joypixels ttf-nerd-fonts-symbols noto-fonts-emoji | emoji/symbol font
-M | ttf-dejavu ttf-liberation noto-fonts | fonts used in my dotfiles
+M | ttf-dejavu ttf-liberation noto-fonts ttf-roboto-mono ttf-ibm-plex | fonts used in my dotfiles
 M | youtube-dl | command-line to download videos from youTube and a few more sites
 M | youtube-viewer | command line utility for viewing youTube videos
 M | ffmpeg | recording utility for video and audio on the command line
@@ -255,19 +262,17 @@ M | mpd | lightweight music daemon
 M | mpc | terminal interface for mpd
 M | mpv | media player
 M | ncmpcpp | ncurses interface for music
-M | easytag | simple tag audio editor
 M | zathura | pdf viewer
 M | zathura-pdf-mupdf | allows mupdf pdf compatibility in zathura
 M | poppler | manipulates .pdfs and gives .pdf previews
 M | dunst | lightweight notification-daemon
 M | libnotify | library for sending desktop notifications
 M | gucharmap | gnome unicode charmap
-M | firefox | web browser from mozilla.org
+M | qutebrowser | vim-like browser based on PyQt5
 M | steam | valve's digital software delivery system
 M | signal-desktop | private messenger
 A | libxft-bgra | fix crashing when viewing color emojis
 A | tremc | curses interface for transmission
-G | [nnn](https://github.com/jarun/nnn) | fastest terminal file manager
 - **Reboot system**
 ```
 - systemctl reboot
