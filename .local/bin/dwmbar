@@ -42,7 +42,7 @@ torrents() {
     done <<EOF
     $data
 EOF
-    transmission-remote -l | grep -qE "%|n/a" && printf " %s" "$SEP"
+    transmission-remote -l | grep -qE "%|n/a" && printf " %s"
 }
 
 mpd() {
