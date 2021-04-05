@@ -31,8 +31,8 @@ c.aliases = {
     'cc': "open -t https://jonasjacek.github.io/colors/",
     'od': "open -t https://odysee.com/",
     'bc': "open -t https://based.cooking/",
+    'ax': "open -t https://animixplay.to/",
     'md': "open -t https://mp3quack.lol/",
-    'tag': "open -t http://www.tagged.com/home.html",
     'suck': "open -t http://suckless.org/",
 }
 
