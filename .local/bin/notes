@@ -3,8 +3,8 @@
 # Select an existing entry to remove it from the file, or type a new entry to
 # add it.
 blue=$(xgetres color4)
-bg=$(xgetres foreground)
-fg=$(xgetres background)
+bg=$(xgetres background)
+fg=$(xgetres foreground)
 mf=$(xgetres font)
 
 file="$HOME/.local/share/note.list"
