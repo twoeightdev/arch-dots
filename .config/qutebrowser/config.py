@@ -62,16 +62,16 @@ c.content.autoplay = False
 c.content.pdfjs = True
 c.content.fullscreen.overlay_timeout = 0
 c.content.fullscreen.window = True
-c.zoom.default = 125
+c.zoom.default = 110
 
 # font and define colors values
 #monospace = "14px 'IBM Plex Mono'"
 c.fonts.default_family = 'IBM Plex Mono'
-c.fonts.default_size = '14px'
+c.fonts.default_size = '16px'
 c.fonts.web.family.cursive = 'IBM Plex Mono'
 c.fonts.web.family.sans_serif = 'IBM Plex Mono'
 c.fonts.web.family.serif = 'IBM Plex Mono'
-c.fonts.completion.category = "bold 14px default_family"
+c.fonts.completion.category = "bold 16px default_family"
 #c.fonts.completion.category = f"bold {monospace}"
 bg = "#1d2021"
 fg = "#ebdbb2"
