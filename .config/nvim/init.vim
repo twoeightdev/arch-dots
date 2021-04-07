@@ -6,10 +6,15 @@ if ! filereadable(system('echo -n "$XDG_CONFIG_HOME/nvim/autoload/plug.vim"'))
   autocmd VimEnter * PlugInstall
 endif
 
+
 " general settings
-let mapleader=' '              " map <space> as leader key
 set nocompatible
-set bg=light                   " set background
+filetype plugin on
+syntax on
+set encoding=utf-8
+let mapleader=' '              " map <space> as leader key
+set bg=dark                    " set background
+colorscheme gruvbox            " sets colorscheme
 set clipboard+=unnamedplus     " enable pasting
 set mouse=a                    " enable mouse scrolling
 set hidden                     " this is recommended by coc
@@ -28,9 +33,6 @@ set shiftwidth=2               " change number of space characters inserted for 
 set expandtab                  " convert tabs to spaces
 set splitbelow                 " horizontal splits will automatically set below
 set splitright                 " vertical splits will automaticall set to the right
-filetype plugin on
-syntax on
-set encoding=utf-8
 set number relativenumber      " show line numbers
 set wildmenu                   " enable wildmenu
 set wildmode=longest:list,full " wildmenu style
