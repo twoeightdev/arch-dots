@@ -6,7 +6,7 @@ xsetroot -cursor_name left_ptr &
 mpdnotify &
 picom -b &
 setbg &
-dwmbar &
+dwmstatus &
 theme
 
 exec dwm

@@ -1,2 +1,3 @@
 XDG_DESKTOP_DIR="$HOME/"
 XDG_DOWNLOAD_DIR="$HOME/.config/dl"
+XDG_PICTURES_DIR="$HOME/.config/ss"

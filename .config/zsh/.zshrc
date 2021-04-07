@@ -86,7 +86,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 set -k               # allows comments in interactive shell
 setopt auto_cd       # cd by just typing the directory name
 setopt extendedglob  # additional syntax for filename generation
-[ ! -f $ZDOTDIR/sc.sh ] && shortcuts
+[ ! -f "$ZDOTDIR/sc.sh" ] && shortcuts
 source $ZDOTDIR/sc.sh
 source $ZDOTDIR/aliasrc 2>/dev/null
 
