@@ -1,4 +1,0 @@
-#!/bin/sh
-IFS=:
-set -- $PATH
-exec "$(find "$@" -type f,l -printf '%f\n' -executable | sort | uniq | menu -p 'Launch')"
