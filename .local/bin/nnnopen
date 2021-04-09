@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 if [[ ! -f "$1" ]];then
   exit
 fi
@@ -17,13 +17,13 @@ elif [[ "${mime%/*}" = "image" ]];then
 # video/*
 elif [[ "${mime%/*}" = "video" || "${mime%/*}" = "audio" ]];then
   mpv "$1"
-# ebooks 
+# ebooks
 elif [[ "$mime" = "application/epub+zip" ]];then
   zathura "$1"
-# pdfs 
+# pdfs
 elif [[ "$mime" = "application/pdf" ]];then
   zathura "$1"
-# exe 
+# exe
 elif [[ "$mime" = "application/x-dosexec" ]];then
   wine "$1"
 fi

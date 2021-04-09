@@ -1,9 +1,4 @@
 #!/bin/sh
-# Search music playlist in dmenu and play it on mpd
-yellow=$(xgetres color3)
-blue=$(xgetres color4)
-bg=$(xgetres background)
-fg=$(xgetres foreground)
-mf=$(xgetres font)
-track=`mpc playlist -f "%position% - %title% - %artist% - %album%" | dmenu -i -fn $mf -nb $bg -sb $blue -nf $fg -l 10 -p "Track"` && mpc play "${track%% *}"
+# search music playlist in dmenu and play it on mpd
+track=`mpc playlist -f "%position% - %title% - %artist% - %album%" | dmenu -i -l 10 -p "Track"` && mpc play "${track%% *}"
 echo "$track"

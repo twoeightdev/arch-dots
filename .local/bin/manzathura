@@ -1,8 +1,4 @@
 #!/bin/sh
-# Search manpage in dmenu and open it on zathura
-blue=$(xgetres color4)
-bg=$(xgetres background)
-fg=$(xgetres foreground)
-mf=$(xgetres font)
-manpage=$(man -k . | dmenu -i -fn $mf -nb $bg -sb $blue -nf $fg -l 10 | awk '{ print $1 }')
+# search manpage in dmenu and open it on zathura
+manpage=$(man -k . | dmenu -i -l 10 | awk '{ print $1 }')
 if [ -z "$manpage" ]; then exit; else man -Tpdf "$manpage" | zathura - & fi

@@ -1,10 +1,4 @@
-#!/bin/bash
-# Temporary cheatsheat for shortcutrc
-blue=$(xgetres color4)
-bg=$(xgetres background)
-fg=$(xgetres foreground)
-mf=$(xgetres font)
-
-cheat=$( less ~/.local/share/misc/cheat | setsid -f dmenu -i -fn $mf -nb $bg -sb $blue -nf $fg -l 30 >/dev/null 2>&1 )
-
+#!/bin/sh
+# temporary cheatsheat for shortcuts
+cheat=$( less ~/.local/share/misc/cheat | setsid -f dmenu -i -l 30 >/dev/null 2>&1 )
 echo "$cheat"

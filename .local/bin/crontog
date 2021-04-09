@@ -1,5 +1,5 @@
 #!/bin/sh
-# Toggles all cronjobs off/on.
+# toggles all cronjobs off/on
 if [ -f ~/.config/cron/cronsaved ]; then
   crontab ~/.config/cron/cronsaved
   rm ~/.config/cron/cronsaved

@@ -1,7 +1,3 @@
 #!/bin/sh
-# Search manpage in dmenu
-blue=$(xgetres color4)
-bg=$(xgetres background)
-fg=$(xgetres foreground)
-mf=$(xgetres font)
-manpage=$(man -k . | dmenu -i -fn $mf -nb $bg -sb $blue -nf $fg -l 10 | awk '{ print $1}') && if [ -z "$manpage" ]; then exit; else $TERMINAL -e man "$manpage" & fi
+# search manpage in dmenu
+manpage=$(man -k . | dmenu -i -l 10 | awk '{ print $1}') && if [ -z "$manpage" ]; then exit; else $TERMINAL -e man "$manpage" & fi

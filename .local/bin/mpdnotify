@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+# show dunst notification with title and artist when new song is played
 while "true"; do
 dunstify -a mpdnotify -t 2000 "Now playing" "$(mpc current --wait)"
 done

@@ -1,6 +1,6 @@
 #!/bin/sh
-# Set as a cron job to check for new RSS entries for newsboat.
-# If newsboat is open, sends it an "R" key to refresh.
+# set as a cron job to check for new RSS entries for newsboat
+# if newsboat is open, sends it an "R" key to refresh
 ping -q -c 1 1.1.1.1 >/dev/null 2>&1 || exit
 
 notify-send "updating RSS feeds..."

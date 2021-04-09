@@ -1,12 +1,12 @@
 #!/bin/sh
-# Usage:
-# `$0`: Ask for recording type via dmenu
-# `$0 screencast`: Record both audio and screen
-# `$0 video`: Record only screen
-# `$0 audio`: Record only audio
-# `$0 kill`: Kill existing recording
+# usage:
+# `$0`: ask for recording type via dmenu
+# `$0 screencast`: record both audio and screen
+# `$0 video`: record only screen
+# `$0 audio`: record only audio
+# `$0 kill`: kill existing recording
 #
-# If there is already a running instance, user will be prompted to end it.
+# if there is already a running instance, user will be prompted to end it
 
 updateicon() { \
   echo "$1" > /tmp/recordingicon
@@ -15,12 +15,12 @@ updateicon() { \
 
 killrecording() {
   recpid="$(cat /tmp/recordingpid)"
-  # kill with SIGTERM, allowing finishing touches.
+  # kill with SIGTERM, allowing finishing touches
   kill -15 "$recpid"
   rm -f /tmp/recordingpid
   updateicon ""
   pkill -RTMIN+9 "${STATUSBAR:-dwmblocks}"
-  # even after SIGTERM, ffmpeg may still run, so SIGKILL it.
+  # even after SIGTERM, ffmpeg may still run, so SIGKILL it
   sleep 3
   kill -9 "$recpid"
   exit
@@ -79,7 +79,7 @@ audio() { \
   }
 
 askrecording() { \
-  choice=$(printf "screencast\\nvideo\\naudio\\nwebcam\\nwebcam (hi-def)" | dmenu -i -fn Monospace-12 -nb "#22262e" -sb "#bf616a" -nf "#d8dee9" -p "Select recording style:")
+  choice=$(printf "screencast\\nvideo\\naudio\\nwebcam\\nwebcam (hi-def)" | dmenu -i -p "Select recording style:")
   case "$choice" in
     screencast) screencast;;
     audio) audio;;
@@ -90,7 +90,7 @@ askrecording() { \
   }
 
 asktoend() { \
-  response=$(printf "No\\nYes" | dmenu -i -fn Monospace-12 -nb "#22262e" -sb "#bf616a" -nf "#d8dee9" -p "Recording still active. End recording?") &&
+  response=$(printf "No\\nYes" | dmenu -i -p "Recording still active. End recording?") &&
   [ "$response" = "Yes" ] &&  killrecording
   }
 

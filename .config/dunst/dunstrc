@@ -1,6 +1,6 @@
 # vim: ft=cfg
 [global]
-  font = monospace 14
+  font = monospace 16
   geometry = "350x5-5+30"
   padding = 2
   horizontal_padding = 8

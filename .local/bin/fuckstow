@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 stowed="bin bspwm calcurse fonts git gnupg gtk"
 stowed="$stowed homeconfig homedir irssi media"
 stowed="$stowed neovim newsboat notification"

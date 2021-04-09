@@ -1,13 +1,8 @@
 #!/bin/sh
-# Open web page via dmenu and open on firefox
-blue=$(xgetres color4)
-bg=$(xgetres background)
-fg=$(xgetres foreground)
-mf=$(xgetres font)
-
+# open web page via dmenu and open on $BROWSER
 TEXT="duckduckgo\ngithub\nludeon\nsuckless\narch\n4anime\nwallhaven\nunixporn\nyoutube\ngmail"
 
-DMENU="$( echo -e $TEXT | dmenu -fn $mf -nb $bg -sb $blue -nf $fg -l 7 -p web )"
+DMENU="$( echo -e $TEXT | dmenu -l 7 -p web )"
 
 BROWSER="/usr/bin/qutebrowser" #Change this to your preference
 

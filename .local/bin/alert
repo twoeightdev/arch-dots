@@ -1,11 +1,5 @@
-#!/bin/bash
-# audio alert for dunst, uncomment which for which audio you use
-
-# change paplay to aplay for alsa
-#aplay ~/.local/share/audio/beep.wav
-
-# pulseaudio
-# Skip alert for mpdnotify
+#!/bin/sh
+# skip alert for mpdnotify
 if [[ "$1" == "mpdnotify" ]]
 then
   exit 0
@@ -16,4 +10,8 @@ then
   exit 0
 fi
 
+# alsa
+#aplay ~/.local/share/audio/beep.wav
+
+# pulseaudio
 paplay ~/.local/share/audio/beep.wav

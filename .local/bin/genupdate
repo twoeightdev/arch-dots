@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/bin/sh
 set -e
 # sync portage tree(eix-sync is recommended)
 eix-sync
@@ -10,7 +10,7 @@ etc-update
 #lafilefixer --justfixit | grep -v skipping
 # uninstall useless packages
 emerge -av --depclean
-# Reverse dynamic library Dependency
+# reverse dynamic library Dependency
 #revdep-rebuild
 # clean source code of the old packages
 eclean -d distfiles

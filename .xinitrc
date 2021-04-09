@@ -9,4 +9,5 @@ setbg &
 dwmstatus &
 theme
 
-exec dwm
+initdwm
+#exec awesome
