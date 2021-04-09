@@ -1,5 +1,4 @@
 #!/bin/sh
-#while type dwm >/dev/null ; do dwm && continue || break ; done
 xset s off -dpms &
 remaps &
 xsetroot -cursor_name left_ptr &
@@ -10,4 +9,3 @@ dwmstatus &
 theme
 
 initdwm
-#exec awesome
