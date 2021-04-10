@@ -128,6 +128,10 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
 #### Dunst
 - Notification settings:
   - use `dunst -print` to show appname and summary
+#### Xrandr
+```
+xrandr --output HDMI-0 --mode 2560x1080 --rate 74.99
+```
 #### Startpage:
   - **Set firefox homepage**
     - `/home/hoaxdream/.ansible/work/repositories/startpage/index.html`

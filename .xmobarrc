@@ -1,5 +1,4 @@
 Config {
-
    -- Appearance
      font        =  "xft:monospace:size=14:antialias=true:hinting=true,JoyPixels:size=9:antialias=true"
    , bgColor     =  "#22262e"

@@ -1,30 +1,30 @@
 -- IMPORTS
 
--- Base
+-- base
 import XMonad
 import XMonad.Config.Desktop
 import qualified XMonad.StackSet as W
 
--- Actions
+-- actions
 import XMonad.Actions.WithAll (sinkAll, killAll)
 import XMonad.Actions.CycleWS (moveTo, shiftTo, WSType(..), nextScreen, prevScreen)
 
--- Utils
+-- utils
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP)
 
--- Data
+-- data
 import qualified Data.Map as M
 import Data.Monoid
 import Data.Ratio ((%)) -- for video
 
--- Hooks
+-- hooks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks (avoidStruts, manageDocks, docksEventHook)
 import XMonad.Hooks.ManageHelpers (isFullscreen, isDialog,  doFullFloat, doCenterFloat, doRectFloat)
 
--- Layout
+-- layout
 import XMonad.Layout.Renamed (renamed, Rename(Replace))
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
@@ -32,11 +32,11 @@ import XMonad.Layout.GridVariants
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.BinarySpacePartition
 
--- System
+-- system
 import System.Exit (exitSuccess)
 import System.IO (hPutStrLn)
 
--- Variables
+-- variables
 myTerminal = "st"                   -- default terminal
 myBrowser = "firefox"               -- default browser
 myBorderWidth = 3                   -- width of window border
@@ -50,7 +50,7 @@ myppHiddenNoWindows = "#d8dee9"     -- hidden workspace(no windows)
 myppTitle = "#84a0c6"               -- active window title in xmobar
 myppUrgent = "#dc322f"              -- urgen workspace
 
--- Workspace
+-- workspace
 xmobarEscape = concatMap doubleLts
   where doubleLts '<' = "<<"
         doubleLts x   = [x]
@@ -63,7 +63,7 @@ myWorkspaces = clickable . (map xmobarEscape) $ ["home","web","chat","games","de
 
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
--- Window rules
+-- window rules
 myManageHook = composeAll
     [ className =? "Gimp"   --> doFloat
     , className =? "mpv"    --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2))
@@ -87,7 +87,7 @@ myManageHook = composeAll
     , isFullscreen --> doFullFloat
     ]
 
--- Keybinds
+-- keybinds
 myKeys =
     [ ("M-S-c", spawn "xmonad --recompile")                                  -- recompile xmonad
     , ("M-S-r", spawn "xmonad --restart")                                    -- restart xmonad
@@ -141,31 +141,31 @@ myKeys =
     , ("M-c", spawn (myTerminal ++ " -e calcurse"))                          -- calurse
     ]
 
--- Layout
+-- layout
 myLayout = avoidStruts (tiled ||| full ||| grid ||| bsp)
     where
-        -- Full
+        -- full
         full = renamed [Replace "F"]
                 $ noBorders (Full)
-        -- Tiled
+        -- tiled
         tiled = renamed [Replace "||"]
                 $ spacingRaw True (Border 10 0 10 0) True (Border 0 10 0 10) True
                 $ ResizableTall 1 (3/100) (1/2) []
-        -- Grid
+        -- grid
         grid = renamed [Replace "#"] 
                 $ spacingRaw True (Border 10 0 10 0) True (Border 0 10 0 10) True 
                 $ Grid (16/10)
-        -- Bsp
+        -- bsp
         bsp = renamed [Replace "BSP"]
                 $ emptyBSP
-        -- Default number of windows in master pane
+        -- default number of windows in master pane
         nmaster = 1
-        -- Default proportion of screen occupied by master pane
+        -- default proportion of screen occupied by master pane
         ratio = 1/2
-        -- Percent of screen to increment by when resizing panes
+        -- percent of screen to increment by when resizing panes
         delta = 3/100
 
--- Main
+-- main
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ ewmh desktopConfig
