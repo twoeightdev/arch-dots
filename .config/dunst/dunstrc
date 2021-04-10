@@ -46,6 +46,8 @@
   foreground = "#d8dee9"
   timeout = 0
 
+# run dunst -print in order to find fitting options for rules
+
 [history-ignore-mpdnotify]
   appname = "mdpnotify"
   summary = "Now playing*"
@@ -54,10 +56,10 @@
 
 [history-ignore-volume]
   appname = "volume"
-  summary = " Volume*"
+  summary = " Volume"
   history_ignore = yes
   timeout = 1
 
-# [play_sound]
+[play_sound]
   summary = "*"
   script = "alert"
