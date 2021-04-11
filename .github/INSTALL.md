@@ -130,7 +130,7 @@ DNS=1.1.1.1
 ```
   - create boot entry: Where _/dev/nvme0nX_ and _Y_ are the drive and partition number where the ESP is located.
   ```javascript
-  - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-linux -u 'root=UUID=XXXXXX-XXX rw quiet loglevel=3 nvidia-drm.modeset=1 rd.systemd.show_status=false rd.udev.log_level=3 initrd=\intel-ucode.img initrd=\initramfs-linux.img' --verbose
+  - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-linux -u 'root=UUID=XXX-XXX rw quiet loglevel=3 vga=current nvidia-drm.modeset=1 rd.systemd.show_status=false rd.udev.log_level=3 initrd=\intel-ucode.img initrd=\initramfs-linux.img' --verbose
   ```
 - **Exit the chroot environment**
 ```
