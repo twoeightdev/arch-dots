@@ -162,3 +162,6 @@
 - steam
 - Signal-Desktop
 - tremc
+
+#### dwm
+- base-devel libX11-devel libXft-devel libXinerama-devel
