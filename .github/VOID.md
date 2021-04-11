@@ -80,8 +80,6 @@
 ```
 - **GRUB**
 ```
-  - $ xbps-install grub
-  - $ grub-install /dev/nvme0n1
   - $ xbps-install grub-x86_64-efi
   - $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id="Void"
 ```
