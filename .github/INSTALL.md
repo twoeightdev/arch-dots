@@ -133,6 +133,12 @@ DNS=1.1.1.1
   - $ ROOT_UUID=$(blkid -s UUID -o value /dev/nvme0n1p2)
   - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-linux -u 'root=UUID=$ROOT_UUID rw quiet loglevel=3 vga=current nvidia-drm.modeset=1 rd.systemd.show_status=false rd.udev.log_level=3 initrd=\intel-ucode.img initrd=\initramfs-linux.img' --verbose
   ```
+- **Grub**
+```
+  - $ pacman -S grub efibootmgr intel-ucode
+  - $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+  - $ grub-mkconfig -o /boot/grub/grub.cfg
+```
 - **Exit the chroot environment**
 ```
   - exit
