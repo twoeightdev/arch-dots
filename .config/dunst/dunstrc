@@ -12,7 +12,6 @@
   word_wrap = true
   separator_color = auto
   transparency = 10
-
   dmenu = /usr/bin/dmenu -p dunst:
   browser = /usr/bin/qutebrowser
 
@@ -52,13 +51,13 @@
   appname = "mdpnotify"
   summary = "Now playing*"
   history_ignore = yes
-  timeout = 1
+  timeout = 2
 
 [history-ignore-volume]
   appname = "volume"
-  summary = " Volume"
+  summary = " Volume*"
   history_ignore = yes
-  timeout = 1
+  timeout = 2
 
 [play_sound]
   summary = "*"
