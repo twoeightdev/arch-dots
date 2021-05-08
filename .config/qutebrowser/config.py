@@ -37,17 +37,18 @@ c.aliases = {
 }
 
 # Enable this if using style2.css in startpage
-c.colors.webpage.darkmode.enabled = True  # This will break my startpage
-c.colors.webpage.preferred_color_scheme = 'dark'
-c.colors.webpage.bg = 'black'
+#c.colors.webpage.darkmode.enabled = True  # This will break my startpage
+#c.colors.webpage.preferred_color_scheme = 'dark'
+#c.colors.webpage.bg = 'black'
 
 c.url.start_pages = ['~/.config/startpage/index.html']
 #c.url.start_pages = ['~/.config/qutebrowser/start.html']
 c.editor.command = ["st", "-e", "nvim '{}'"]
 c.downloads.location.directory = '~/.config/dl'
 c.downloads.location.prompt = False
-c.scrolling.smooth = False
-c.content.notifications = False
+c.scrolling.smooth = True
+c.qt.highdpi = True
+c.content.notifications.enabled = True
 c.tabs.last_close = "close"
 c.tabs.select_on_remove = "prev"
 c.confirm_quit = ["downloads"]
@@ -55,7 +56,6 @@ c.completion.height = "20%"
 c.completion.show = "always"
 c.content.cookies.accept = 'no-3rdparty'
 c.content.dns_prefetch = True
-c.content.ssl_strict = False
 c.downloads.remove_finished = 1000
 c.hints.scatter = True
 c.content.autoplay = False
@@ -231,6 +231,9 @@ config.bind("h", "scroll-px -300 0")
 config.bind("j", "scroll-px 0 300")
 config.bind("k", "scroll-px 0 -300")
 config.bind("l", "scroll-px 300 0")
+config.bind("<Alt-f>", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind("<Alt-Shift-f>", "hint links spawn --detach mpv force-window yes {hint-url}")
+#config.bind("<Alt-f>", "hint links spawn --detach mpv --force-window yes {hint-url}")
 
 config.bind('<Escape>', 'leave-mode ;; jseval -q document.activeElement.blur()', mode='insert')
 config.bind('<Ctrl-x>', 'leave-mode ;; jseval -q document.activeElement.blur()', mode='insert')
