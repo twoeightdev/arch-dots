@@ -206,6 +206,24 @@ include = /etc/pacman.d/mirrorlist
 - **Packages**
 ```
   - xorg-server xorg-xwininfo xorg-xprop xorg-xdpyinfo
+  - xorg-xset xorg-xsetroot xorg-xinit xterm
+  - nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
+  - vulkan-icd-loader lib32-vulkan-icd-loader
+  - xcape mlocate man-db wget zip unzip unrar dosfstools ntfs-3g
+  - xdg-user-dirs xclip xdo xdotool mediainfo transmission-cli bc tree
+  - pulseaudio-alsa pulsemixer pamixer
+  - ttf-joypixels ttf-dejavu ttf-nerd-fonts-symbols ttf-roboto-mono
+  - noto-fonts noto-fonts-emoji ttf-liberation ttf-ibm-plex
+  - youtube-dl ffmpeg maim sxiv xwallpaper imagemagick
+  - newsboat picom mpd mpc mpv ncmpcpp
+  - zathura zathura-pdf-mupdf poppler python-adblock cronie
+  - dunst libnotify gucharmap htop discord
+  - qutebrowser steam signal-desktop transmission-cli
+  - wine-staging lib32-giflib lib32-libpng lib32-gnutls lib32-mpg123
+  - lib32-openal lib32-v4l-utils lib32-libpulse lib32-libjpeg-turbo
+  - lib32-libxcomposite lib32-libgcrypt lib32-libxinerama ocl-icd lib32-ocl-icd
+  - lib32-libxslt lib32-libva lib32-gtk3 lib32-gst-plugins-base-libs lutris
+  - tremc(aur) libxft-bgra-git(aur)
 ```
 - **Reboot system**
 ```
