@@ -204,7 +204,10 @@ include = /etc/pacman.d/mirrorlist
   - $ makepkg -sci
 ```
 - **Packages**
+```
   - xorg-server xorg-xwininfo xorg-xprop xorg-xdpyinfo
+```
+- **Reboot system**
 ```
 - systemctl reboot
 ```
