@@ -1,4 +1,0 @@
-#!/bin/sh
-# find file and open using v
-file="$(find "$HOME" -type f,l | fzf)"
-[ "$file" ] && fzfeditor "$file"

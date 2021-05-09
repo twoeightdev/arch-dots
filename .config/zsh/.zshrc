@@ -104,16 +104,18 @@ fi
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 
+# find file with fzf and open with editor
+se() {
+  file="$(find "$HOME" -type f,l | fzf)"
+  [ "$file" ] && fzfeditor "$file"
+}
 # cd to directory in home
-cdc() {
+gdc() {
   cd "$(find -type d | fzf)"
 }
 # cd to directory in /media/data
-cdf() {
+gdd() {
   cd "$(find "/media/data/" -type d | fzf)"
-}
-open() {
-  xdg-open "$(find -type f | fzf)"
 }
 
 # syntax highlighting
