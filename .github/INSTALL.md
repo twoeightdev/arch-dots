@@ -225,10 +225,6 @@ include = /etc/pacman.d/mirrorlist
   - lib32-libxslt lib32-libva lib32-gtk3 lib32-gst-plugins-base-libs lutris
   - tremc(aur) libxft-bgra-git(aur)
 ```
-- **Reboot system**
-```
-- systemctl reboot
-```
 ---
 ### Window manager
 - **Dwm**
@@ -249,13 +245,11 @@ include = /etc/pacman.d/mirrorlist
 ---
 ### Install dotfiles
 ```
-  - $ alias dot='git --git-dir=$HOME/.config/dots/ --work-tree=$HOME'` - `add to current shell scope
+  - Remove stock configuration in $HOME, else error will occur.
   - $ echo "dots" >> .gitignore
   - $ git clone --bare https://github.com/hoaxdream/dots.git $HOME/.config/dots
-  - Remove stock configuration in $HOME, else error will occur.
-  - $ dot checkout
-  - $ dot config --local status.showUntrackedFiles no
-  - $ dot push -u origin master
+  - $ git --git-dir=$HOME/.config/dots/ --work-tree=$HOME checkout
+  - $ git --git-dir=$HOME/.config/dots/ --work-tree=$HOME config --local status.showUntrackedFiles no
 ```
 ### File manager
 - **nnn**
