@@ -7,7 +7,7 @@ bb   ~/.local/bin
 mn  /mnt
 bx  /media/core
 bf  /media/data
-bp  /media/data/pix/walls
+bp  /media/data/walls
 bl  /media/data/linux_data/backups
 bh   ~/
 
