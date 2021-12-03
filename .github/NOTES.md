@@ -95,6 +95,12 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
 - **Enable user interface css setings: set to** `"true"`
   -`toolkit.legacyUserProfileCustomizations.stylesheets`
 ---
+#### Signal-cli
+- signal-cli -u ACCOUNT register
+- use registration captcha
+- https://signalcaptchas.org/registration/generate.html or
+- https://signalcaptchas.org/challenge/generate.html
+- signal-cli -u ACCOUNT verify CODE
 #### Keybind XFree86 keysym path
 - `/usr/include/X11/XF86keysym.h
 ---

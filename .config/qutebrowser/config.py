@@ -26,7 +26,6 @@ c.content.blocking.adblock.lists = [
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"
 ]
 
-
 # search engines
 c.url.searchengines = {
         "DEFAULT": "https://duckduckgo.com/?q={}",
