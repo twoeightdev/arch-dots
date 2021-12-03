@@ -61,7 +61,8 @@ mpd() {
 # Weather
 LOCATION='San Roque San Pedro Laguna'
 while true; do
-  curl -s "https://wttr.in/${LOCATION}?format=1" > $HOME/.cache/Weather.tmp
+  #curl -s "https://wttr.in/${LOCATION}?format=1" > $HOME/.cache/Weather.tmp
+  curl -s "https://wttr.in/San+Roque+San+Pedro+Laguna?format=1" > $HOME/.cache/Weather.tmp
   sleep 300
 done &
 

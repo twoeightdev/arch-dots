@@ -1,6 +1,6 @@
 #!/bin/sh
 # open web page via dmenu and open on $BROWSER
-TEXT="duckduckgo\ngithub\nludeon\nsuckless\narch\n4anime\nwallhaven\nunixporn\nyoutube\ngmail"
+TEXT="duckduckgo\ngithub\nludeon\nsuckless\narch\nanimix\nwallhaven\nunixporn\nyoutube\ngmail"
 
 DMENU="$( echo -e $TEXT | dmenu -l 7 -p web )"
 
@@ -12,7 +12,7 @@ case "$DMENU" in
     tagged)       $BROWSER https://ludeon.com/forums/index.php ;;
     suckless)     $BROWSER https://suckless.org                ;;
     arch)         $BROWSER https://bbs.archlinux.org/index.php ;;
-    4anime)       $BROWSER https://4anime.to                   ;;
+    animix)       $BROWSER https://animixplay.to                   ;;
     wallhaven)    $BROWSER https://wallhaven.cc                ;;
     unixporn)     $BROWSER https://www.reddit.com/r/unixporn   ;;
     youtube)      $BROWSER https://www.youtube.com             ;;

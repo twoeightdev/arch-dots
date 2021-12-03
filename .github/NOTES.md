@@ -14,6 +14,7 @@
   - `*/15 * * * * /usr/bin/newsboat -x reload && pkill -RTMIN+6 dwmblocks`
   - `*/5 * * * * export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus; export DISPLAY=:0; . $HOME/.zprofile; /usr/bin/mbsync -a && pkill -RTMIN+12 dwmblocks`
   - `5 */2 * * * export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus; export DISPLAY=:0; . $HOME/.zprofile; checkup`
+  - `0,10,20,30,40,50 * * * *   AWKPATH=/home/jeremy/.config/scw/scw_config.awk /home/jeremy/.local/bin/checksig /home/jeremy/.local/bin/sig`
 - **Root**
   - `sudo -E crontab -e`
   - `5 */2 * * * /usr/bin/pacman -Syuw --noconfirm && pkill -RTMIN+8 dwmblocks`

@@ -6,6 +6,7 @@ mpdnotify &
 picom -b &
 setbg &
 dwmstatus &
+#signal-daemon &
 theme
 
 initdwm
