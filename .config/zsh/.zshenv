@@ -17,6 +17,12 @@ export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc"
 export NPM_CONFIG_CACHE="$HOME/.cache/npm"
 export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR/npm"
 
+# cargo
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
+# gradle
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
 # Default programs:
 export EDITOR="nvim"
 export VISUAL="nvim"
