@@ -14,6 +14,11 @@ _Use at your own risk or use [Arch Wiki](https://wiki.archlinux.org/index.php/in
   - $ dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 ```
 
+#### Change font
+```
+  - $ setfont ter-132b
+```
+
 #### Verify the boot mode
   - If the command shows the directory without error, then the system is **UEFI**
 ```
