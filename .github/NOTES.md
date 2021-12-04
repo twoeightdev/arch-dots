@@ -101,6 +101,11 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
 - https://signalcaptchas.org/registration/generate.html or
 - https://signalcaptchas.org/challenge/generate.html
 - signal-cli -u ACCOUNT verify CODE
+---
+#### Git
+- single file commit
+- dot commit -m "Mesg" /path/to/file
+---
 #### Keybind XFree86 keysym path
 - `/usr/include/X11/XF86keysym.h
 ---
