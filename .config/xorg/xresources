@@ -17,8 +17,8 @@ XTerm*saveLines: 4096
 XTerm*utf8: 1
 XTerm*loginShell: true
 XTerm*internalBorder: 17
-XTerm*font: monospace:size=16
-XTerm*faceName: monospace
+XTerm*faceName: Monospace:style=Medium:size=16
+Xterm*faceSize: 16
 XTerm*renderFont: true
 XTerm*cursorBlink: false
 XTerm*ScrollBar: false
