@@ -69,7 +69,7 @@ _Use at your own risk or use [Arch Wiki](https://wiki.archlinux.org/index.php/in
 ```
 - **Pacstrap packages**
 ```
-  - $ pacstrap /mnt base base-devel linux linux-firmware
+  - $ pacstrap /mnt base base-devel linux linux-firmware nvidia nvidia-utils nvidia-settings git neovim efibootmgr intel-ucode
 ```
 ---
 #### System Configuration
@@ -88,7 +88,6 @@ _Use at your own risk or use [Arch Wiki](https://wiki.archlinux.org/index.php/in
 ```
 - **Localization**
 ```
-  - $ pacman -S neovim
   - $ nvim /etc/locale.gen      # uncomment prefer language
   - $ locale-gen
   - $ echo LANG=en_PH.UTF-8 > /etc/locale.conf
@@ -130,7 +129,6 @@ DNS=1.1.1.1
 - **Efistub Boot loader**
 ```
   - $ lsblk -f                          # Get root UUID
-  - $ pacman -S efibootmgr intel-ucode
   - $ efibootmgr -b <bootnum> -B        # Delete old boot entry
 ```
   - create boot entry: Where _/dev/nvme0nX_ and _Y_ are the drive and partition number where the ESP is located.
