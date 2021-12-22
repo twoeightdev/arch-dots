@@ -101,6 +101,12 @@ UUID=xxxx-xxxx /media/core ext4 rw,user,exec 0 0
 - https://signalcaptchas.org/registration/generate.html or
 - https://signalcaptchas.org/challenge/generate.html
 - signal-cli -u ACCOUNT verify CODE
+#### Signal linking
+- signal-cli link -n "optional device name" | tee >(xargs -L 1 qrencode -t utf8)
+- scan qr code
+- git clone https://github.com/hoaxdream/personal
+- copy config.yml in ~/.config/siggo/config.yml
+- signal-cli -u +<yourphonenumber> -o json receive
 ---
 #### Git
 - single file commit
