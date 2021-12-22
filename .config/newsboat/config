@@ -31,7 +31,7 @@ color article white default bold
 browser linkhandler
 macro d set browser "setsid -f menuhandler"; open-in-browser; set browser linkhandler
 macro c set browser "xclip -sel clip <<<" ; open-in-browser; set browser linkhandler
-macro m set browser "setsid mpv"; open-in-browser ; set browser linkhandler
+macro m set browser "setsid mpv --profile=H60"; open-in-browser ; set browser linkhandler
 macro v set browser "youtube-viewer --comments=%u" ; open-in-browser ; set browser linkhandler
 macro b set browser "$BROWSER"; open-in-browser ; set browser linkhandler
 
