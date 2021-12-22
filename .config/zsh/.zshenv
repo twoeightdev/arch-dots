@@ -34,12 +34,12 @@ export FILE="nnnrun"
 export WM="dwm"
 
 # nnn
-export NNN_BMS='h:~;d:~/.config/dl;w:~/.config/work;b:~/.local/bin;s:~/.local/share;c:~/.config;m:~/.config/ss;f:/media/data;x:/media/core;p:/media/data/walls'
 export NNN_PLUG='o:!tpic $nnn;t:!trash $nnn;f:!nperm $nnn;x:!xperm $nnn;u:!uperm $nnn'
 export NNN_OPENER=nnnopen
 export NNN_USE_EDITOR=1
 export NNN_FCOLORS='c1e2252e006033f7c6d6abc4'
 export NNN_FIFO="/tmp/nnn.fifo"
+export NNN_BMS="h:~;c:~/.config;d:~/.config/dl;w:~/.config/work;u:~/.config/mnt;b:~/.local/bin;s:~/.local/share;f:/media/data;x:/media/core;p:/media/data/walls;v:/media/data/vids"
 
 # Relocate variables
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
