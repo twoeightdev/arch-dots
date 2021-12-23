@@ -1,7 +1,8 @@
 # Environmental variables sets in here
-
+typeset -U PATH
 # Adds $HOME/.local/bin to $PATH
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.config/fzf/bin:$HOME/.local/bin:$PATH"
 
 # XDG Base Directory
 export XDG_LOCAL_HOME="$HOME/.local" # This sould be one of defaults
