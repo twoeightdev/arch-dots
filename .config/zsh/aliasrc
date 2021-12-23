@@ -79,7 +79,7 @@ alias \
     df="df -h" \
     fn="fc-match -a | grep -i" \
     fne="fc-list : family | grep -i" \
-    prem="shred -zvu -n 5" \
+    prm="shred -zvu -n 5" \
     xtar="tar xfv" \
     sysinfo="echo "" && sysinfo" \
     lfetch="echo "" && lfetch" \
@@ -91,4 +91,4 @@ alias \
     covid="curl https://corona-stats.online/" \
     xrec="xmonad --recompile" \
     uprepo="sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist" \
-    ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/bm/shortcutrc" \
+    ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/sc.sh" \
