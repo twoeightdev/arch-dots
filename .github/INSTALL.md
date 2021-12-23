@@ -134,7 +134,7 @@ DNS=1.1.1.1
   - create boot entry: Where _/dev/nvme0nX_ and _Y_ are the drive and partition number where the ESP is located.
   ```javascript
   - $ ROOT_UUID=$(blkid -s UUID -o value /dev/nvme0n1p2)
-  - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-linux -u 'root=UUID=$ROOT_UUID rw quiet loglevel=3 vga=current nvidia-drm.modeset=1 rd.systemd.show_status=false rd.udev.log_level=3 initrd=\intel-ucode.img initrd=\initramfs-linux.img' --verbose
+  - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-linux -u 'root=UUID=$ROOT_UUID rw quiet loglevel=3 vga=current nvidia-drm.modeset=1 kernel.nmi_watchdog=0 random.trust_cpu=1 ipv6.disable=1 rd.systemd.show_status=false rd.udev.log_level=3 initrd=\intel-ucode.img initrd=\initramfs-linux.img' --verbose
   ```
 - **Grub Boot loader**
 ```

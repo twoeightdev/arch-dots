@@ -158,3 +158,10 @@ xrandr --output HDMI-0 --mode 2560x1080 --rate 74.99
     - set launch option to `-cachedir=~/.local/share/Zomboid`
     - edit `/path/Steam/steamapps/common/ProjectZomboid/projectzomboid.sh`
     - `GAMEDIR="${HOME}/.local/share/Zomboid"`
+#### Entropy
+- kernel parameters
+  - random.trust_cpu=1
+  - ipv6.disable=1
+  - kernel.nmi_watchdog=0
+  - mitigations=off * to be tested
+  - 
