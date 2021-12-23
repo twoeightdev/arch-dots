@@ -85,7 +85,7 @@ c.content.autoplay = False
 c.content.pdfjs = True
 c.content.fullscreen.overlay_timeout = 0
 c.content.fullscreen.window = True
-c.zoom.default = 110
+c.zoom.default = 125
 
 # font and define colors values
 #monospace = "14px 'IBM Plex Mono'"
