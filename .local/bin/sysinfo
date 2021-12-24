@@ -21,7 +21,7 @@ shell=$(basename "$SHELL")
 uptime=$(uptime -p | sed 's/up //')
 term=$TERMINAL
 
-xdef=$(grep -o 'Nord' ~/.config/xorg/colors/xcolor)
+xdef=$(grep -o 'Gruvbox' ~/.config/xorg/colors/xcolor)
 colors="$xdef"
 
 ## UI DETECTION
