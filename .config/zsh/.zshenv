@@ -63,7 +63,7 @@ export LESSHISTFILE="-"
 export GOBIN="$XDG_LOCAL_HOME/bin"
 export GOPATH="$XDG_DATA_HOME/go"
 
-export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuchrc"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 

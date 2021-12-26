@@ -13,6 +13,7 @@ alias \
     yt="youtube-dl --add-metadata -i" \
     yta="yt -x -f bestaudio/best" \
     ffmpeg="ffmpeg -hide_banner" \
+    mbsync="mbsync -c $HOME/.config/mbsync/mbsyncrc" \
     nnn="nnn -dH"
 
 # Colorize commands when possible

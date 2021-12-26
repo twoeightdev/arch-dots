@@ -53,6 +53,12 @@ EOF
     transmission-remote -l | grep -qE "%|n/a" && printf " %s"
 }
 
+mail() {
+  unread="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/*/[Ii][Nn][Bb][Oo][Xx]/new/* -type f | wc -l 2>/dev/null)"
+  pidof mbsync -c $HOME/.config/mbsync/mbsyncrc >/dev/null 2>&1 && icon="ﮮ"
+  [ "$unread" = "0" ] && [ "$icon" = "" ] || echo "MAIL-$unread $icon"
+}
+
 mpd() {
   music="$(mpc current -f "%artist% - %title%")"
   [ "$music" ] && printf " %s %s" "$music" "$SEP"
@@ -83,7 +89,7 @@ while true; do
   MEMUSED=$(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2fGiB\n", ( $3 / 1024))}')
 
 # Status    祝   
-xsetroot -name " ^c#fb4934^ﰬ^d^^c#b8bb26^${rxs}^d^KiB|^c#fb4934^ﰵ^d^^c#b8bb26^${txs}^d^KiB $(torrents) $(pulseaudio) $SEP ^c#928374^WEATHER:${WEATHER}^d^ $SEP ^c#98971a^MEM-${MEMUSED}^d^ $SEP ^c#d79921^GPU-${GPU_TEMP}°C^d^ $SEP ^c#98971a^${CPU_TEMP}^d^ $SEP $(_date) "
+xsetroot -name " ^c#fb4934^ﰬ^d^^c#b8bb26^${rxs}^d^KiB|^c#fb4934^ﰵ^d^^c#b8bb26^${txs}^d^KiB $(torrents) $(pulseaudio) $SEP $(mail) $SEP ^c#928374^WEATHER:${WEATHER}^d^ $SEP ^c#98971a^MEM-${MEMUSED}^d^ $SEP ^c#d79921^GPU-${GPU_TEMP}°C^d^ $SEP ^c#98971a^${CPU_TEMP}^d^ $SEP $(_date) "
 
 # internet
 
