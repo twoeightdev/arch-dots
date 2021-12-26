@@ -44,7 +44,7 @@ c.url.searchengines = {
 c.aliases = {
     "w": "session-save",
     "wq": "quit --save",
-    "mpv": "spawn -d mpv --profile=H60 --force-window=immediate {url}",
+    "mpv": "spawn -d mpv --profile=H60 {url}",
     'gh': "open -t https://github.com/hoaxdream",
     'wh': "open -t https://alpha.wallhaven.cc/search?q=&categories=111&purity=100&topRange=1y&sorting=toplist&order=desc&colors=336600&page=1",
     'wt': "open -t https://www.webtoons.com/en/",
@@ -254,8 +254,8 @@ config.bind("h", "scroll-px -300 0")
 config.bind("j", "scroll-px 0 300")
 config.bind("k", "scroll-px 0 -300")
 config.bind("l", "scroll-px 300 0")
-config.bind("<Alt-f>", "hint links spawn --detach mpv --profile=M60 --force-window {hint-url}")
-config.bind("<Alt-Shift-f>", "hint links spawn --detach mpv --profile=H60 force-window {hint-url}")
+config.bind("<Alt-f>", "hint links spawn --detach mpv --profile=M60 {hint-url}")
+config.bind("<Alt-Shift-f>", "hint links spawn --detach mpv --profile=H60 {hint-url}")
 #config.bind("<Alt-f>", "hint links spawn --detach mpv --force-window yes {hint-url}")
 
 config.bind('<Escape>', 'leave-mode ;; jseval -q document.activeElement.blur()', mode='insert')
