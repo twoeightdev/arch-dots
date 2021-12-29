@@ -60,7 +60,7 @@ mail() {
 }
 
 newsup() {
-  echo "$(newsboat -x print-unread | awk '{ if($1>0) print "NEWS:" $1}')"
+  cat /tmp/newsupdate 2>/dev/null || echo "$(newsboat -x print-unread | awk '{ if($1>0) print "NEWS:" $1}')"
 }
 
 mpd() {
