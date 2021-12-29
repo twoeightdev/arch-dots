@@ -11,7 +11,7 @@ _Use at your own risk or use [Arch Wiki](https://wiki.archlinux.org/index.php/in
 
 #### Burn ISO with CLI using dd
 ```
-  - $ dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+  - $ dd bs=4M if=path/to/archlinux.iso of=/dev/sdx conv=fsync oflag=direct status=progress
 ```
 
 #### Change font
