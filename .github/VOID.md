@@ -43,10 +43,14 @@
 ```
 - **Installation Configuration**
 ```
-  - $ vim /etc/hostname  # Specify hostname
-  - Go through the options in /etc/rc.conf.
   - If installing a glibc distribution, edit /etc/default/libc-locales, uncommenting desired locales.
-  - $ xbps-reconfigure -f glibc-locales  # generat locale files
+  - $ echo "LANG=en_PH.UTF-8 UTF-8" > /etc/locale.conf
+  - $ echo "LC_COLLATE=C" >> /etc/locale.conf
+  - $ echo "en_PH.UTF-8 UTF-8" >> /etc/default/libc-locales
+  - $ xbps-reconfigure -f glibc-locales
+  - Set hostname
+  - $ echo art > /etc/hostname
+  - $ vim /etc/rc.conf
   - $ passwd  # Set password
   - $ cp /proc/mounts /etc/fstab  # Generate fstab
   - Remove lines in /etc/fstab that refer to proc, sys, devtmpfs and pts.
@@ -67,16 +71,23 @@
 ```
 -- **Dracut**
 ```
-  - $ echo hostonly=yes >> /etc/dracut.conf
+  - $ nvim /etc/dracut.conf.d/boot.conf
+  hostonly=yes
+  hostonly_cmdline=no
+  use_fstab=yes
+  compress="cat"
+  omit_dracutmodules+=" dash i18n rpmversion btrfs lvm qemu multipatch qemu-net lunmask fstab-sys biosdevname dmraid dmsquash-live mdraid nbd nfs "
 ```
 -- **Finishing install**
 ```
-  - $ xbps-install -Su void-repo-nonfree intel-ucode
+  - $ xbps-install -Su void-repo-nonfree 
+  - $ xbps-install -Su
+  - $ xbps-install -Su intel-ucode nvidia
 ```
 - **EFIBSTUB**
 ```
   - $ ROOT_UUID=$(blkid -s UUID -o value /dev/nvme0n1p2)
-  - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-5.11.12_1 -u 'root=UUID=$ROOT_UUID rw quiet initrd=\initramfs-5.11.12_1.img' --verbose
+  - $ efibootmgr -d /dev/nvme0n1 -p Y -c -L "Arch" -l /vmlinuz-5.11.12_1 -u 'root=UUID=$ROOT_UUID rw quiet loglevel=3 console=tty2 nvidia-drm.modeset=1 nowatchdog ipv6.disable udev.log_level=3 initrd=\initramfs-5.11.12_1.img' --verbose
 ```
 - **GRUB**
 ```
@@ -85,7 +96,8 @@
 ```
 - **Finalization**
 ```
-  - $ xbps-reconfigure -fa linux<major>.<minor>
+  - $ xbps-query -l | grep linux
+  - $ xbps-reconfigure -f linux<major>.<minor>
   - $ exit
   - $ umount -R /mnt
   - $ reboot
@@ -165,3 +177,103 @@
 
 #### dwm
 - base-devel libX11-devel libXft-devel libXinerama-devel
+
+#### New packages
+xorg-server
+xwininfo
+xprop
+xdpyinfo
+xset
+xsetroot
+xinit
+xterm
+nvidia
+nvidia-libs
+nvidia-libs-32bit
+vulkan-loader
+vulkan-loader-32bit
+xcape
+mlocate
+man-db
+wget
+zip
+unzip
+unrar
+dosfstools
+ntfs-3g
+xdg-user-dirs
+xclip
+xdo
+xdotool
+mediainfo
+bc
+tree
+pulseaudio
+alsa-plugins-pulseaudio
+pulsemixer
+pamixer
+nerd-fonts
+dejavu-fonts-ttf
+fonts-roboto-ttf
+noto-fonts-ttf
+noto-fonts-emoji
+liberation-fonts-ttf
+yt-dlp
+ffmpeg
+maim
+sxiv
+xwallpaper
+ImageMagick
+newsboat
+picom
+mpd
+mpc
+mpv
+ncmpcpp
+zathura
+zathura-pdf-mupdf
+poppler
+python3-adblock
+cronie
+dunst
+libnotify
+gucharmap
+htop
+qutebrowser
+qrencode
+steam
+neomutt
+notmuch
+isync
+msmtp
+
+# Wine
+wine
+giflib-32bit
+libpng-32bit
+gnutils-32bit
+libmpg123-32bit
+libopenal-32bit
+v4l-utils-32bit
+libpulseaudio-32bit
+libjpeg-turbo-32bit
+libXcomposite-32bit
+libgcrypt-32bit
+libXinerama-32bit
+ocl-icd
+ocl-icd-32bit
+libxslt-32bit
+libva-32bit
+gst-plugins-base1-32bit
+lutris
+
+# Missing
+signal-cli
+siggo
+libxft-bgra-git
+discord
+lib32-gtk3
+
+# Missing and to be replace
+transmission-cli - rtorrent
+tremc - rtorrent
