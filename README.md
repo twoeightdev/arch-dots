@@ -1,7 +1,7 @@
 ## Overview
 
-* Void linux dotfiles for [dwm](http://suckless.org/)
-* EFISTUB Void Linux Installation [Guide](https://github.com/hoaxdream/void-dots/blob/main/.config/dev/notes/VOID.md)
+* Arch linux dotfiles for [dwm](http://suckless.org/)
+* EFISTUB Arch Linux Installation [Guide](https://github.com/hoaxdream/void-dots/blob/main/.config/dev/notes/VOID.md)
 
 ## Dwm
 ![Rice screen preview0001](https://i.imgur.com/O9IjRg3.png)
@@ -29,14 +29,12 @@
 
 ## Personal suckless build
 
-- [Dwm](https://github.com/hoaxdream/void-dwm)
+- [Dwm](https://github.com/hoaxdream/arch-dwm)
 
-- [St](https://github.com/hoaxdream/void-st)
+- [St](https://github.com/hoaxdream/arch-st)
 
-- [Slock](https://github.com/hoaxdream/void-slock)
+- [Slock](https://github.com/hoaxdream/arch-slock)
 
-- [Dwmblocks](https://github.com/hoaxdream/void-dwmblocks) - [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async) by UtkarshVerma
+- [Dwmblocks](https://github.com/hoaxdream/arch-dwmblocks) - [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async) by UtkarshVerma
 
-- [Dmenu](https://github.com/hoaxdream/void-dmenu)
-
-Check the [Guide](https://github.com/hoaxdream/void-dots/blob/main/.config/dev/notes/VOID.md) on how to patch [libxft-bgra](https://github.com/hoaxdream/void-dots/blob/main/.config/dev/patches/libXft-bgra/change.patch) for void linux.
+- [Dmenu](https://github.com/hoaxdream/arch-dmenu)
