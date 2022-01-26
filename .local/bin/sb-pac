@@ -1,0 +1,11 @@
+#!/bin/sh
+
+count="$(pacman -Qu | grep -Fcv "[ignored]")"
+icon="Updates:"
+
+if [ $count -lt 0 ];then
+	exit
+else
+    . sb-theme
+    display "$(echo $icon$count)"
+fi
