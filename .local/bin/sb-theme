@@ -22,7 +22,6 @@ display() {
 		case "$(basename $0)" in
             sb-torrent) color="$color8" ;;
             sb-net) color="$color6" ;;
-            sb-xbps) color="$color5" ;;
             sb-audio) color="$color4" ;;
             sb-mail) color="$color3" ;;
             sb-news) color="$color2" ;;
