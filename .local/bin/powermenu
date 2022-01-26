@@ -1,6 +1,6 @@
 #!/bin/sh
 set -- lock exit shutdown reboot
-ctl='sudo loginctl'
+ctl='sudo systemctl'
 op="$(printf "%s\n" "$@" | dmenu -m 0 -p 'System')"
 case "$op" in
 	lock) slock & mpc pause;;
