@@ -1,9 +1,0 @@
-#!/bin/sh
-# show dunst notification with title and artist when new song is played
-
-# message ID
-msgID="280307"
-
-while "true"; do
-dunstify -a mpdnotify -t 2000 -r "$msgID" "Now playing" "$(mpc current --wait)"
-done

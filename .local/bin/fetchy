@@ -1,77 +1,47 @@
-#!/usr/bin/env bash
-# vim: ft=sh
-# ufetch-gentoo - tiny system info for gentoo
-distro=$(lsb_release -sd)
-distro=${distro##[\"\']}
-distro=${distro%%[\"\']}
+#!/bin/sh
 
-# user is already defined
-host="$(cat /proc/sys/kernel/hostname)"
-kernel="$(uname -r)"
-uptime="$(uptime -p | sed 's/up //')"
-packages="$(pacman -Qqs | wc -l)"
-shell="$(basename "$SHELL")"
-term="$TERMINAL"
+#COLOURS
+RESTORE=$(echo '\033[0m')
+RED=$(echo '\033[00;31m')
+GREEN=$(echo '\033[00;32m')
+YELLOW=$(echo '\033[00;33m')
+BLUE=$(echo '\033[00;34m')
+MAGENTA=$(echo '\033[00;35m')
+PURPLE=$(echo '\033[00;35m')
+CYAN=$(echo '\033[00;36m')
+LIGHTGRAY=$(echo '\033[00;37m')
+LRED=$(echo '\033[01;31m')
+LGREEN=$(echo '\033[01;32m')
+LYELLOW=$(echo '\033[01;33m')
+LBLUE=$(echo '\033[01;34m')
+LMAGENTA=$(echo '\033[01;35m')
+LPURPLE=$(echo '\033[01;35m')
+LCYAN=$(echo '\033[01;36m')
+WHITE=$(echo '\033[01;37m')
+ORANGE=$(echo '\033[01;33m')
+DARK=$(echo '\033[01;30m')
+#
 
-# desktop environment
+# Arch
+#DISTRO=$(tail -n 1 /etc/lsb-release | sed s/DISTRIB_DESCRIPTION=//g | sed s/\"//g)
 
-if [ -n "${DE}" ]; then
-  ui="${DE}"
-  uitype='DE'
-elif [ -n "${WM}" ]; then
-  ui="${WM}"
-  uitype='WM'
-elif [ -n "${XDG_CURRENT_DESKTOP}" ]; then
-  ui="${XDG_CURRENT_DESKTOP}"
-  uitype='DE'
-elif [ -n "${DESKTOP_SESSION}" ]; then
-  ui="${DESKTOP_SESSION}"
-  uitype='DE'
-elif [ -f "${HOME}/.xinitrc" ]; then
-  ui="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
-  uitype='WM'
-elif [ -f "${HOME}/.xsession" ]; then
-  ui="$(tail -n 1 "${HOME}/.xsession" | cut -d ' ' -f 2)"
-  uitype='WM'
-else
-  ui='unknown'
-  uitype='UI'
-fi
+# VoidLinux
+DISTRO=$(tail -n 1 /etc/os-release | sed s/PRETTY_NAME=//g | sed s/\"//g)
+RAM_TOTAL_BYTES=$(grep MemTotal /proc/meminfo | awk '{print $2}')
+RAM_AVAIL_BYTES=$(grep MemAvailable /proc/meminfo | awk '{print $2}')
 
-# define colors, probably don't change these
-if [ -x "$(command -v tput)" ]; then
-  bold="$(tput bold)"
-  black="$(tput setaf 0)"
-  red="$(tput setaf 1)"
-  green="$(tput setaf 2)"
-  yellow="$(tput setaf 3)"
-  blue="$(tput setaf 4)"
-  magenta="$(tput setaf 5)"
-  cyan="$(tput setaf 6)"
-  white="$(tput setaf 7)"
-  reset="$(tput sgr0)"
-fi
+RAM_TOTAL=$((RAM_TOTAL_BYTES / 1024))
+RAM_AVAIL=$((RAM_AVAIL_BYTES / 1024))
+RAM_USED=$((RAM_TOTAL - RAM_AVAIL))
 
-# you can change these
-lc="${reset}${bold}${green}"        # labels
-nc="${reset}${bold}${green}"        # user and hostname
-ic="${reset}${regular}${white}"     # info
-c0="${reset}${bold}${green}"        # first color
-m6="${reset}${bold}${magenta}"      # magenta
-b2="${reset}${regular}${blue}"      # blue
-b7="${reset}${bold}${blue}"         # blue
-r5="${reset}${bold}${red}"          # red
-c3="${reset}${bold}${cyan}"         # cyan
-y9="${reset}${bold}${yellow}"       # yellow
+HOSTNAME=$(cat /etc/hostname)
+KERNEL=$(uname -r | head -c7)
+WINM=$(echo $WM)
 
-# output
-cat <<EOF
-${nc}${USER}${nc}@${nc}${host}${reset}
-${b7}OS:        ${ic}${distro}${reset}
-${b7}KERNEL:    ${ic}${kernel}${reset}
-${b7}UPTIME:    ${ic}${uptime}${reset}
-${b7}PACKAGES:  ${ic}${packages}${reset}
-${b7}SHELL:     ${ic}${shell}${reset}
-${b7}${uitype}:        ${ic}${ui}${reset}
-${b7}TERM:      ${ic}${term}${reset}
-EOF
+echo "${GREEN}╭╔═════════════════════════════════╗"╮
+echo "${GREEN}╫║ ${ORANGE}λ ${LYELLOW}$HOSTNAME${WHITE}\t$USER\t"${GREEN} ${ORANGE}Λ ${GREEN}║╫
+echo "${GREEN}╫║ ${ORANGE}ξ ${LYELLOW}os ${WHITE}\t$DISTRO""\t\t"${GREEN}               ${ORANGE}Ξ ${GREEN}║╫
+echo "${GREEN}╫║ ${ORANGE}π ${LYELLOW}wm/de ${WHITE}\t$WINM""\t\t"${GREEN} ${ORANGE}Π ${GREEN}║╫
+echo "${GREEN}╫║ ${ORANGE}ψ ${LYELLOW}kernel ${WHITE}\t$KERNEL""\t\t"${GREEN}${ORANGE} Ψ ${GREEN}║╫
+echo "${GREEN}╫║ ${ORANGE}ω ${LYELLOW}ram ${WHITE}\t""$RAM_USED"M / "$RAM_TOTAL"M"\t"${GREEN} ${ORANGE}ω ${GREEN}║╫
+echo "${GREEN}╰╚═════════════════════════════════╝"╯

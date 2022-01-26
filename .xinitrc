@@ -2,11 +2,13 @@
 xset s off -dpms &
 remaps &
 xsetroot -cursor_name left_ptr &
-mpdnotify &
-picom -b &
 setbg &
-dwmstatus &
-#signal-daemon &
-theme
+dwmblocks &
 
-initdwm
+autostart="picom mpd dunst unclutter"
+
+for program in $autostart; do
+  pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
+
+exec dwm
