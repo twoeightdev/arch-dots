@@ -1,0 +1,7 @@
+#!/bin/sh
+# Update void-package.
+
+cd /home/hoaxdream/.config/dev/void-packages
+git pull --autostash --rebase
+./xbps-src show-sys-updates
+./xbps-src update-sys

@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# Use neovim for vim if present
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings
+alias \
+    cp="cp -iv" \
+    mv="mv -iv" \
+    rm="rm -vI" \
+    bc="bc -ql" \
+    mkd="mkdir -pv" \
+    yt="youtube-dl --add-metadata -i" \
+    yta="yt -x -f bestaudio/best" \
+    ffmpeg="ffmpeg -hide_banner" \
+    mbsync="mbsync -c $HOME/.config/mbsync/mbsyncrc"
+
+# Colorize commands when possible
+alias \
+    ls="ls -hN --color=auto --group-directories-first" \
+    ll="ls -lA -h --group-directories-first --color=auto" \
+    la="ls -A -S1qX" \
+    lh="ls -A" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    bat="bat -n"
+
+# These common commands are just too long! abbreviate them
+alias \
+    pk="pkill -9" \
+    o="$FILE" \
+    v="$EDITOR" \
+    pu="sudo pacman -Syu" \
+    ps="pacman -Ss" \
+    pss="pacman -Qs" \
+    pi="sudo pacman -S" \
+    pr="sudo pacman -Rs" \
+    pc="sudo pacman -Rns $(pacman -Qtdq)'" \
+    z="zathura"
+
+# Make
+alias \
+    mki="make && sudo make install" \
+    cb="make clean && rm -f blocks.h && git reset --hard origin/main" \
+    cm="make clean && rm -f config.h && git reset --hard origin/main"
+
+# Miscellaneous
+alias \
+    wph="curl wttr.in/San+Roque+San+Pedro+Laguna" \
+    weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+    getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c" \
+    fxp="chmod -R a=r,u+w,a+X" \
+    cpat="echo $PATH | sed 's/:/\n/g' | sort | uniq -c" \
+    df="df -h" \
+    fn="fc-match -a | grep -i" \
+    fne="fc-list : family | grep -i" \
+    prm="shred -zvu -n 5" \
+    xtar="tar xfv" \
+    sysinfo="echo "" && sysinfo" \
+    ifn="fc-cache -f -v" \
+    gip="curl ipinfo.io/ip" \
+    civ="convert +append" \
+    cih="convert -append" \
+    covidph="curl https://corona-stats.online/philippines" \
+    covid="curl https://corona-stats.online/" \
+    xrec="xmonad --recompile" \
